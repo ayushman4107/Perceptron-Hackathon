@@ -1,0 +1,545 @@
+--- original_snapshot.md
++++ Problem_3_Off_Policy_Evaluation_Revised.md
+@@ -1,10 +1,10 @@
+ # Did the Policy Actually Work, or Did It Just Look Like It Did?
+ 
+ **Research dossier for Perceptron, IIT Bombay Techfest — Problem 3**  
+-**Research cutoff: 28 October 2026**  
++**Research cutoff: 28 October 2026; mathematical audit and revision: 30 October 2026**  
+ Prepared from both supplied research files, primary papers, proceedings, and official dataset/software documentation.
+ 
+-This is a broad, problem-focuse56d literature synthesis, not a claim to enumerate every OPE publication. Established results are distinguished from recent research, proposed experiments, and calculations derived for this report. Exact toy-example numbers below are population calculations, not fabricated experimental results. No Open Bandit experiment was run for this dossier.
++This is a broad, problem-focused literature synthesis, not a claim to enumerate every OPE publication. Established results are distinguished from recent research, proposed experiments, and calculations derived for this report. Exact toy-example numbers below are population calculations, not fabricated experimental results. No Open Bandit experiment was run for this dossier. This revision adds independently derived conditions and an executed synthetic verification supplement. The original file remains unchanged. This is a research dossier and project specification, not a completed novel-algorithm manuscript. See Appendix A for the mathematical specification and Appendix B for measured audit results.
+ 
+ ## Reading map
+ 
+@@ -50,17 +50,23 @@
+ V(\mu)=0.5(0.9\cdot0.2+0.1\cdot0.1)+0.5(0.1\cdot0.8+0.9\cdot0.7)=0.45.
+ \]
+ 
++*Equation M01.*
++
+ The proposed policy's value on the **same population in the same period** is:
+ 
+ \[
+ V(\pi)=0.5(0.1)+0.5(0.7)=0.40.
+ \]
+ 
++*Equation M02.*
++
+ But the success rate among visitors historically given A1 is:
+ 
+ \[
+ E[R\mid A=1]=\frac{0.05(0.1)+0.45(0.7)}{0.50}=0.64.
+ \]
++
++*Equation M03.*
+ 
+ That misleading 64% happens because the old policy mostly gave A1 to people likely to succeed anyway. IPS corrects the imbalance:
+ 
+@@ -68,6 +74,8 @@
+ E\left[\frac{\mathbf1(A=1)R}{\mu(1\mid X)}\right]
+ =0.05\frac{0.1}{0.1}+0.45\frac{0.7}{0.9}=0.40.
+ \]
++
++*Equation M04.*
+ 
+ Now suppose a sale increases every action's success probability by 20 percentage points in the following period. The new policy achieves 60%. A before/after dashboard reports **60% − 45% = +15 percentage points**. Yet keeping the current policy during the sale would achieve 65%. The policy change itself is **−5 percentage points**.
+ 
+@@ -137,6 +145,8 @@
+ V_{P_X}(\pi)=E_{X\sim P_X}\left[\sum_a\pi(a\mid X)q(X,a)\right].
+ \]
+ 
++*Equation M05.*
++
+ This is a population-average counterfactual. It does not recover what would have happened to each particular individual. Define improvement as \(\Delta=V(\pi)-V(\pi_0)\), with the same reward, population, and horizon in both terms.
+ 
+ For binary actions, the ATE is \(E[R(1)-R(0)]\). A policy-value contrast is more general:
+@@ -145,6 +155,8 @@
+ \Delta=E_X\sum_a[\pi(a\mid X)-\pi_0(a\mid X)]q(X,a).
+ \]
+ 
++*Equation M06.*
++
+ Potential-outcome reasoning predates modern bandits; Rubin's work is a foundational reference. [Rubin, 1974](https://dash.harvard.edu/entities/publication/73120378-82c0-6bd4-e053-0100007fdf3b).
+ 
+ ### 3.2 The assumptions that make the question answerable
+@@ -155,7 +167,7 @@
+ 
+ **Overlap.** Wherever the target assigns positive probability, the logger must also assign positive probability. Practical overlap needs sufficiently frequent observations, not merely a mathematically positive probability. If the old system always showed electronics, arbitrary book recommendations are not nonparametrically identifiable from those logs alone.
+ 
+-**Appropriate sampling and stability.** Simple formulas below assume independent observations and a fixed environment. Repeated users, adaptive policies, delayed outcomes, and drift require changes to the analysis. No-interference is a separate causal requirement: one user's action should not change another user's reward in an unmodeled way.
++**Appropriate sampling and stability.** Unless explicitly stated otherwise, the sample-mean variance and Wald formulas below assume IID observations from a fixed population and logger, a target policy fixed independently of evaluation outcomes, and the moment conditions in Appendix A. Independence alone does not supply identical-distribution or finite-variance conditions. Repeated users, adaptive policies, delayed outcomes, and drift require changes to the analysis. No-interference is a separate causal requirement: one user's action should not change another user's reward in an unmodeled way.
+ 
+ **Valid propensity information.** A model score is not necessarily a probability. A softmax probability before business-rule filtering may not be the probability of the final served action. Record the actual sampling probability after all eligibility and selection logic.
+ 
+@@ -173,7 +185,7 @@
+ 
+ ## 4. Core estimators and their tradeoffs
+ 
+-Write \(w_i=\pi(A_i\mid X_i)/p_i\), and \(\hat q_i^\pi=\sum_a\pi(a\mid X_i)\hat q(X_i,a)\).
++Write \(w_i=\pi(A_i\mid X_i)/p_i\), \(\hat q_i=\hat q(X_i,A_i)\), and \(\hat q_i^\pi=\sum_a\pi(a\mid X_i)\hat q(X_i,a)\). Here n is the number of observations, K the number of actions, and F the number of cross-fitting folds. For held-out scores, each row uses the nuisance model fitted without its fold. Appendix A gives domains and explicit conditions.
+ 
+ ### 4.1 Direct method: predict all relevant action outcomes
+ 
+@@ -181,15 +193,19 @@
+ \hat V_{DM}=\frac1n\sum_i\hat q_i^\pi.
+ \]
+ 
++*Equation M07.*
++
+ Train an outcome model on observed context-action-reward triples. Suitable starting points are logistic regression for binary outcomes and a tree-based model for nonlinear relationships. Include action-context interactions or use separate action models where sample sizes permit.
+ 
+-DM avoids large importance weights, but it can confidently extrapolate into regions with little data. Predictive calibration under the logging distribution is necessary evidence, not proof of counterfactual calibration. Lack of overlap remains an identification problem even when a model produces a number.
++DM avoids large importance weights, but it can confidently extrapolate into regions with little data. Held-out predictive calibration is useful diagnostic evidence, not a necessary condition for unbiased IPS or DR with exact propensities, and not proof of counterfactual calibration. Lack of overlap remains an identification problem even when a model produces a number.
+ 
+ ### 4.2 IPS/IPW: correct the action distribution
+ 
+ \[
+ \hat V_{IPS}=\frac1n\sum_iw_iR_i.
+ \]
++
++*Equation M08.*
+ 
+ The weighting principle has roots in unequal-probability sampling. [Horvitz and Thompson, 1952](https://www.stat.cmu.edu/~brian/905-2008/papers/Horvitz-Thompson-1952-jasa.pdf).
+ 
+@@ -200,6 +216,8 @@
+ =\sum_a\pi(a\mid x)q(x,a).
+ \]
+ 
++*Equation M09.*
++
+ Thus IPS is finite-sample unbiased for a fixed target under the stated sampling setup, not merely “asymptotically unbiased.” Estimated propensities generally remove that exact finite-sample guarantee.
+ 
+ Why variance can explode: with conditional outcome variance \(\sigma^2(x,a)\), the IID variance decomposes as
+@@ -208,6 +226,8 @@
+ \operatorname{Var}(\hat V_{IPS})=\frac1n\left\{E[w^2\sigma^2(X,A)]+\operatorname{Var}[wq(X,A)]\right\}.
+ \]
+ 
++*Equation M10.*
++
+ A few rare target-compatible actions can dominate both terms. A formally unbiased estimator can be practically unreliable. The minimax analysis of Wang et al. explains why this difficulty is fundamental rather than just an implementation defect. [Wang et al., 2017](https://proceedings.mlr.press/v70/wang17a.html).
+ 
+ ### 4.3 SNIPS: normalize the weights
+@@ -216,6 +236,8 @@
+ \hat V_{SNIPS}=\frac{\sum_iw_iR_i}{\sum_iw_i}.
+ \]
+ 
++*Equation M11.*
++
+ With nonnegative weights and a positive denominator, the result lies within the observed reward range. It is a ratio estimator: usually biased in finite samples and consistent under suitable conditions. It often improves stability, but lower variance is not a universal theorem. A zero denominator means no matched support in that sample, not a value of zero.
+ 
+ Self-normalization also matters in policy learning, where optimizing a raw IPS objective can exploit estimation artifacts. [Swaminathan and Joachims, 2015, self-normalized learning](https://papers.nips.cc/paper/2015/hash/39027dfad5138c9ca0c474d71db915c3-Abstract.html).
+@@ -226,9 +248,11 @@
+ \hat V_{DR}=\frac1n\sum_i\left[\hat q_i^\pi+w_i\{R_i-\hat q(X_i,A_i)\}\right].
+ \]
+ 
++*Equation M12.*
++
+ The prediction supplies a baseline; the weighted residual corrects its errors. Dudík, Langford, and Li established this approach for contextual-bandit evaluation and learning. A later expanded treatment analyzes policy evaluation and optimization. [Dudík et al., 2011](https://arxiv.org/abs/1103.4601); [expanded treatment](https://arxiv.org/abs/1503.02834).
+ 
+-Here is the useful algebra, conditional on nuisance models fitted independently of evaluation observations. If \(\tilde\mu\) and \(\tilde q\) are their probability and reward limits, the bias term is
++Here is the useful algebra, conditional on nuisance models fitted independently of evaluation observations. For any fixed measurable nuisance functions \(\tilde\mu,\tilde q\), with positive fitted propensities on target support and sufficient integrability, the conditional bias is exactly the following expression. Interpreting these functions as probability limits additionally requires convergence and uniform-integrability conditions; the algebra alone does not justify exchanging limits and expectations. The bias is
+ 
+ \[
+ E_X\sum_a\pi(a\mid X)
+@@ -236,13 +260,15 @@
+ [\tilde q(X,a)-q(X,a)].
+ \]
+ 
++*Equation M13.*
++
+ If either nuisance is correct, this product is zero. This is the reason for “double robustness.” It is not robustness to hidden confounding, missing support, incorrect target-policy probabilities, or a changed environment.
+ 
+ When both nuisance models converge sufficiently well, DR can attain favorable asymptotic efficiency. Consistency under one correct nuisance is weaker than valid root-n confidence intervals: the latter needs additional convergence-rate and moment conditions. Neither DR nor SNIPS is uniformly best in finite samples. DR can produce estimates outside the reward range; silently clipping the final answer changes the estimator.
+ 
+ ### 4.5 Cross-fitting: protect the correction from overfitting
+ 
+-For IID data, split rows into K folds, fit nuisance models on K−1 folds, and compute scores only on the held-out fold. Pool the held-out scores. Use group splits for repeated users and a justified temporal design for dependent or adaptive logs.
++For IID data, split rows into F folds, fit nuisance models on F−1 folds, and compute scores only on the held-out fold. Pool the held-out scores. Use group splits for repeated users and a justified temporal design for dependent or adaptive logs.
+ 
+ Cross-fitting reduces dependence between fitted predictions and their own residuals. It does not remove confounding or create action coverage. For flexible nuisance estimates, orthogonal scores plus sample splitting underpin modern debiased inference. A common sufficient condition is that the product of appropriate nuisance estimation errors is \(o_p(n^{-1/2})\), together with overlap and regularity. [Chernozhukov et al., double/debiased machine learning](https://arxiv.org/abs/1608.00060).
+ 
+@@ -250,7 +276,7 @@
+ 
+ ### 4.6 Clipping, switching, and shrinkage
+ 
+-**Clipped IPS:** replace \(w\) by \(\min(w,c)\). This limits variance but introduces bias. With rewards in \([0,1]\) and exact weights, its population bias relative to IPS is nonpositive. That special direction does not automatically carry over to clipped DR residuals.
++**Clipped IPS:** replace \(w\) by \(\min(w,c)\). For nonnegative rewards and a fixed nonnegative cap, this can reduce variance at the expense of bias; a data-selected cap needs separate analysis. For signed rewards, a general variance-reduction or bias-sign claim is not implied. With rewards in \([0,1]\) and exact weights, its population bias relative to IPS is nonpositive. That special direction does not automatically carry over to clipped DR residuals.
+ 
+ **Switch-DR:**
+ 
+@@ -258,9 +284,11 @@
+ \hat V_{Switch}=\frac1n\sum_i[\hat q_i^\pi+\mathbf1(w_i\le\tau)w_i(R_i-\hat q_i)].
+ \]
+ 
++*Equation M14.*
++
+ Large weights trigger reliance on the model. Small thresholds approach DM; an infinite threshold gives DR. [Wang et al., 2017](https://proceedings.mlr.press/v70/wang17a.html).
+ 
+-**Optimistic DR shrinkage:** a studied form uses \(\tilde w=\lambda w/(w^2+\lambda)\) in the correction, interpolating toward DM as \(\lambda\to0\) and DR as \(\lambda\to\infty\). The framework optimizes a bound on MSE; it does not guarantee that any shrinkage choice improves every dataset. [Su et al., 2020](https://proceedings.mlr.press/v119/su20a.html).
++**Optimistic DR shrinkage:** a studied form uses \(\tilde w=\lambda w/(w^2+\lambda)\) for finite \(w\ge0\) and \(\lambda>0\), with \(\tilde w=0\) defined explicitly when \(\lambda=0\) in the correction, interpolating toward DM as \(\lambda\to0\) and DR as \(\lambda\to\infty\). The framework optimizes a bound on MSE; it does not guarantee that any shrinkage choice improves every dataset. [Su et al., 2020](https://proceedings.mlr.press/v119/su20a.html).
+ 
+ **MRDR:** fit the nuisance model for the variance of the DR objective rather than ordinary prediction loss. This targets the downstream statistical task but adds optimization and tuning complexity. [Farajtabar et al., 2018](https://proceedings.mlr.press/v80/farajtabar18a).
+ 
+@@ -346,7 +374,7 @@
+ 
+ You cannot choose whichever estimator gives the highest value and call it the most accurate. PAS-IF constructs pseudo-policy evaluation tasks by subsampling available logs to guide estimator selection. It addresses the lack of ground-truth estimator error on the actual task. [Udagawa et al., AAAI 2023](https://arxiv.org/abs/2211.13904).
+ 
+-For your project, predeclare a primary estimator and display alternatives as diagnostics. Disagreement is information about instability, not permission to select the most flattering answer.
++Estimator selection also predates PAS-IF: Su, Srinath, and Krishnamurthy develop adaptive estimator selection in ICML 2020. [Primary paper](https://proceedings.mlr.press/v119/su20d.html). For your project, predeclare a primary estimator and display alternatives as diagnostics. Disagreement is information about instability, not permission to select the most flattering answer.
+ 
+ ### 5.9 Developments located in the 2025–October 2026 search
+ 
+@@ -367,7 +395,7 @@
+ 
+ ### 6.1 Recommended data strategy
+ 
+-Use **a controlled synthetic benchmark as the primary proof of correctness**, followed by **Open Bandit Dataset as a real-world validation**. They answer different questions: simulation gives exact counterfactual truth and controlled violations; real logs expose realistic reward sparsity, action imbalance, and preprocessing issues.
++Use **a controlled synthetic benchmark as the primary empirical verification**, followed by **Open Bandit Dataset as a real-world validation**. They answer different questions: simulation gives exact counterfactual truth and controlled violations; real logs expose realistic reward sparsity, action imbalance, and preprocessing issues.
+ 
+ | Data source | Strength | Limitation | Recommended role |
+ |---|---|---|---|
+@@ -427,6 +455,8 @@
+ Z_i^{DR}=\hat q_i^\pi+w_i(R_i-\hat q_i).
+ \]
+ 
++*Equation M15.*
++
+ The basic asymptotic standard error is
+ 
+ \[
+@@ -434,7 +464,9 @@
+ CI_{95\%}=\hat V\pm1.96\widehat{SE}(\hat V).
+ \]
+ 
+-This is an approximation with finite-moment, nuisance-rate, and sampling assumptions. Rare events and extreme weights can make it poor. Cross-fitting helps justify the score construction but does not guarantee a good normal approximation.
++*Equation M16.*
++
++Here \(s_Z^2=(n-1)^{-1}\sum_i(Z_i-\bar Z)^2\), with n at least 2. This is an approximation with finite-moment, nuisance-rate, and sampling assumptions. For estimated nuisances, double robustness of consistency alone does not justify this standard error. Appendix A states one sufficient regime and a counterexample to inference from consistency alone. Rare events and extreme weights can make it poor. Cross-fitting helps justify the score construction but does not guarantee a good normal approximation.
+ 
+ For SNIPS, use a ratio-estimator influence contribution approximately
+ 
+@@ -442,6 +474,8 @@
+ \hat\phi_i=\frac{w_i(R_i-\hat V_{SNIPS})}{\bar w}.
+ \]
+ 
++*Equation M17.*
++
+ Use its empirical variance for the standard error. Applying the IPS standard-error formula unchanged to SNIPS is incorrect.
+ 
+ ### 7.3 Estimate improvement directly
+@@ -451,6 +485,8 @@
+ \[
+ \hat\Delta=\bar D,\qquad \widehat{SE}(\hat\Delta)=s_D/\sqrt n.
+ \]
++
++*Equation M18.*
+ 
+ This retains covariance between estimates. Overlap or non-overlap of two separate CIs is not the right general test of policy improvement.
+ 
+@@ -483,7 +519,9 @@
+ ESS=\frac{(\sum_iw_i)^2}{\sum_iw_i^2}.
+ \]
+ 
+-Report n, ESS, ESS/n, number of clicks, target-action match count, minimum positive logged propensity, weight quantiles, maximum weight, mean weight, and the fraction of total weight carried by the largest observations. Under the standard identity, mean weight should approach one; a discrepancy can reflect sampling noise, support problems, or incorrect probabilities.
++*Equation M19.*
++
++The ESS expression requires finite nonnegative weights with a positive sum. It is undefined for an empty sample or all-zero weights; the sample-mean variance also requires n>=2. These diagnostics do not certify action support away from observed rows. Report n, ESS, ESS/n, number of clicks, target-action match count, minimum positive logged propensity, weight quantiles, maximum weight, mean weight, and the fraction of total weight carried by the largest observations. Under the standard identity, mean weight should approach one; a discrepancy can reflect sampling noise, support problems, or incorrect probabilities.
+ 
+ ESS is a weight-concentration diagnostic, not a theorem that an interval is valid. High ESS does not rule out confounding. Low ESS does not imply every conservative interval is too narrow. No universal ESS cutoff certifies a safe decision.
+ 
+@@ -517,6 +555,8 @@
+ \le\Gamma,\qquad\Gamma\ge1.
+ \]
+ 
++*Equation M20.*
++
+ Gamma bounds an **odds ratio**, not an additive percentage-point change or a multiplier on policy value. Gamma=1 recovers the no-hidden-assignment-bias case within this model, assuming U is sufficient for exchangeability. Rosenbaum's pairwise matched-unit model is related but is not identical to this nominal-versus-full propensity model.
+ 
+ Solving the inequalities gives:
+@@ -526,6 +566,8 @@
+ \frac{\Gamma e}{1-e+\Gamma e}.
+ \]
+ 
++*Equation M21.*
++
+ For treated observations, the inverse propensity lies between
+ 
+ \[
+@@ -533,6 +575,8 @@
+ h=1+\Gamma(1/e-1).
+ \]
+ 
++*Equation M22.*
++
+ Consequently, multiplying a DR estimate by Gamma and dividing it by Gamma is **not a derivation of sensitivity bounds**. Likewise, the box \([w/\Gamma,\Gamma w]\) is not the exact odds-model weight interval. The marginal model and compatibility constraints are developed in [Dorn and Guo](https://arxiv.org/html/2102.04543v3).
+ 
+ ### 8.3 A simple, mathematically explicit stretch-goal implementation
+@@ -545,19 +589,25 @@
+ e[mz_1+(1-m)z_0]=1.
+ \]
+ 
++*Equation M23.*
++
+ The counterfactual success probability is \(q_1=e m z_1\). Eliminating \(z_0\) yields the following population interval for that treated potential-outcome mean:
+ 
+ \[
+ L_x=\max\{em\ell,\;1-e(1-m)h\},
+ \]
+ 
++*Equation M24.*
++
+ \[
+ U_x=\min\{emh,\;1-e(1-m)\ell\}.
+ \]
+ 
+-Average endpoints using the target population's stratum probabilities: \(L=\sum_xP(x)L_x\), \(U=\sum_xP(x)U_x\). This is an elementary derivation for the restricted binary, single-potential-outcome setting from the odds and normalization constraints. It is not a general multi-action DR sensitivity estimator, nor a claim of joint sharpness for arbitrary policy contrasts.
+-
+-For finite data, plug-in values of e, m, and stratum frequencies are **estimated bound endpoints**, not automatically confidence limits. Sparse cells and max/min boundary points need inferential care. If reliable interval inference is beyond scope, present these as a sensitivity analysis and keep the point-estimation CI separately labeled.
++*Equation M25.*
++
++Average endpoints using the target population's stratum probabilities: \(L=\sum_xP(x)L_x\), \(U=\sum_xP(x)U_x\). This is an elementary derivation for the restricted binary, single-potential-outcome setting from the odds and normalization constraints. It assumes consistency and exchangeability conditional on a sufficient latent U, nominal e=P(A=1|X), and the marginal odds restriction. It does not impose the original known randomized assignment mechanism as an additional fixed constraint: the sensitivity exercise allows alternative hidden-assignment mechanisms consistent with the observed law. It is not a general multi-action DR sensitivity estimator, nor a claim of joint sharpness for arbitrary policy contrasts.
++
++For finite data, plug-in values of e, m, and stratum frequencies are **estimated bound endpoints**, not automatically confidence limits. If a stratum has no treated observations, m is undefined; if its empirical e is 0 or 1, these formulas must not be used by adding an arbitrary epsilon. An empirically empty cell is not proof of structural zero support. Report insufficient information or use a separately justified observation model. Sparse cells and max/min boundary points need inferential care. If reliable interval inference is beyond scope, present these as a sensitivity analysis and keep the point-estimation CI separately labeled.
+ 
+ Applied to Section 1's exact observed population probabilities:
+ 
+@@ -569,11 +619,11 @@
+ | 2.00 | 36.25% | 45.25% |
+ | 3.00 | 34.667% | 50.00% |
+ 
+-These endpoints were calculated from the displayed formulas. The original toy generator is unconfounded; this table asks which other counterfactual values could be compatible with the same observations under allowed hidden assignment bias. At Gamma=1.5, the entire interval remains below the factual incumbent's 45%. At Gamma=2, that harm conclusion is no longer established by this sensitivity set alone. Sampling uncertainty is absent from this population illustration.
++These endpoints were calculated from the displayed formulas and independently checked against two-variable linear-program vertex enumeration in the audit. The derivation requires 0<e<1, 0<=m<=1, and finite Gamma>=1. Appendix A supplies a feasibility construction and handles m=0 and m=1 without conditioning on null-probability cells. The original toy generator is unconfounded; this table asks which other counterfactual values could be compatible with the same observations under allowed hidden assignment bias. At Gamma=1.5, the entire interval remains below the factual incumbent's 45%. At Gamma=2, that harm conclusion is no longer established by this sensitivity set alone. Sampling uncertainty is absent from this population illustration.
+ 
+ ### 8.4 General sensitivity methods and sharpness
+ 
+-For continuous covariates and outcomes, naive independent weight boxes ignore compatibility constraints. Conditional moment or quantile-balancing restrictions can tighten the region. A bound is **sharp** if it describes the smallest range compatible with the stated observed distribution and assumptions; a conservative outer bound can still be useful if labeled correctly.
++For continuous covariates and outcomes, naive independent weight boxes ignore compatibility constraints. Dorn and Guo's identification results include discrete outcomes, but the cited paper's particular quantile-regression confidence-interval theorems assume continuous outcome densities. They cannot be imported unchanged to this binary-reward implementation. Conditional moment or quantile-balancing restrictions can tighten the region. A bound is **sharp** if it describes the smallest range compatible with the stated observed distribution and assumptions; a conservative outer bound can still be useful if labeled correctly.
+ 
+ Dorn and Guo develop quantile balancing; Dorn, Guo, and Kallus develop doubly valid/doubly sharp sensitivity estimators; Ishikawa and He use kernel conditional moment constraints for confounding-robust policy evaluation. [Doubly valid/doubly sharp analysis](https://arxiv.org/abs/2112.11449); [Ishikawa and He, AISTATS 2023](https://proceedings.mlr.press/v206/ishikawa23a.html).
+ 
+@@ -589,15 +639,19 @@
+ 
+ ### 8.6 How to generate a genuine hidden-confounding experiment
+ 
+-Generate a measured X and latent U. Let:
++Generate a measured X and latent U from a specified joint distribution; generate action and potential-reward randomization independently conditional on (X,U). Without this independence, merely specifying the two conditional marginals below does not ensure exchangeability. The equations describe a family of generators, not a fully specified reproducible experiment. One possible form is:
+ 
+ \[
+ A\sim\operatorname{Bernoulli}(\operatorname{sigmoid}(b_0+b_X X+b_U U)),
+ \]
+ 
++*Equation M26.*
++
+ \[
+ R(a)\sim\operatorname{Bernoulli}(\operatorname{sigmoid}(c_0+c_X X+c_A a+c_{XA}Xa+c_U U)).
+ \]
++
++*Equation M27.*
+ 
+ Use \(b_U\ne0\) and \(c_U\ne0\), hide U from the analyst, and make the analyst use the marginal propensity e(X), not the oracle e(X,U). Compute truth by integrating over the full simulator. Show how nominal IPS/DR can fail and whether a correctly specified sensitivity set covers the true value. In the evaluator, check that the simulated odds departures actually obey the chosen Gamma.
+ 
+@@ -615,9 +669,11 @@
+ +\underbrace{V_1(\pi)-V_0(\pi)}_{\text{environment/population change for the target}}.
+ \]
+ 
++*Equation M28.*
++
+ Historical OPE identifies the first term under its assumptions. It does not identify the second merely by being “causal.” Section 1 deliberately uses a simulator to reveal both.
+ 
+-If only the context distribution changes and reward mechanisms remain invariant, a density ratio \(P_1(X)/P_0(X)\) can transport an estimate to the new population, given suitable support and data to estimate the ratio. If conditional rewards change, context reweighting is insufficient. Difference-in-differences or controlled experiments can address some temporal questions under their own assumptions; they are not interchangeable with standard OPE.
++If only the context distribution changes and reward mechanisms remain invariant, the Radon–Nikodym density ratio \(dP_1/dP_0(X)\), assuming \(P_1\ll P_0\) can transport an estimate to the new population, given suitable support and data to estimate the ratio. If conditional rewards change, context reweighting is insufficient. Difference-in-differences or controlled experiments can address some temporal questions under their own assumptions; they are not interchangeable with standard OPE.
+ 
+ ### 9.2 Selective labels and delayed outcomes
+ 
+@@ -840,7 +896,7 @@
+ 
+ **Marginalized DR.** Follow-up work combines embedding-based evaluation with a doubly robust construction for large action spaces. It belongs in the extended reading list, but should not be mixed with ordinary action-level DR without specifying the new assumptions. [Shimizu and Forastiere](https://arxiv.org/abs/2308.03443).
+ 
+-**Evaluation of many candidates.** Multiple-policy inference and selection-adjusted guarantees matter when a dashboard searches over many rules. A 95% interval for a prespecified policy does not automatically cover the winner chosen after inspecting dozens of estimates. [Dann et al., AISTATS 2023](https://proceedings.mlr.press/v206/dann23a.html).
++**Evaluation of many candidates.** A 95% interval for a prespecified policy does not automatically cover the winner chosen after inspecting many estimates. Use independent final evaluation or a justified simultaneous procedure. Dann et al. study sample-efficient evaluation of multiple RL policies using shared on-policy Monte Carlo samples; this is related context, not a theorem validating post-selection intervals for our logged-data dashboard. [Dann et al., AISTATS 2023](https://proceedings.mlr.press/v206/dann23a.html).
+ 
+ ### 12.2 What remains genuinely difficult
+ 
+@@ -907,4 +963,179 @@
+ 
+ Primary sources were preferred: original papers, PMLR/NeurIPS/AAAI proceedings, author-hosted manuscripts, arXiv records, and official ZOZO/OBP/SCOPE-RL documentation. Sources are linked at the relevant claims. Full text was inspected where needed for the Open Bandit statistics and sensitivity-model details; several frontier entries were checked at the primary abstract/metadata level only. A blocked OpenReview page was not used as evidence for detailed claims.
+ 
+-This is not a systematic review with a registered search protocol, database-completeness guarantee, or independently reproduced results from every cited paper. The local checks verified the illustrative arithmetic, original-generator integration, and displayed binary sensitivity endpoints. They did not run the supplied pipeline, download OBD, fit models, or establish empirical performance for a completed hackathon implementation.
++This is not a systematic review with a registered search protocol, database-completeness guarantee, or independently reproduced results from every cited paper. The original preparation checked illustrative arithmetic. The 30 October audit additionally executed the separate verification suite, including a cross-fitted tabular outcome estimator, repeated synthetic experiments, and independent numerical sensitivity checks; see Appendix B and the companion reports for exact scope. It did not execute the supplied invalid pipeline, download OBD, implement a production workbench, or establish a novel policy-revision algorithm. The literature audit is claim-focused, not an independent proof of every cited theorem.
++
++
++## Appendix A. Audited mathematical specification
++
++This appendix states sufficient conditions and supplies independent derivations. It does not assert that these conditions were established for a real deployment. Equation labels M01–M28 identify the original displayed expressions; equation tags A1–A7 identify additions. The separately titled identification and variance assumptions below are distinguished by their titles.
++
++### A.1 Notation and scope
++
++| Symbol | Domain and interpretation |
++|---|---|
++| n, K, F | Sample size n>=1, finite number of actions K>=1, cross-fitting folds 2<=F<=n |
++| X, P_X | Pre-action context and its evaluation-population law |
++| A, R(a), R | Action in {0,...,K-1}, potential reward, observed reward R=R(A) |
++| mu, pi, pi_0 | Measurable logger, fixed target, fixed baseline; nonnegative action probabilities summing to one |
++| p_i, b_i | Actual selected-action propensity; fitted/working selected-action propensity when distinguished |
++| q, h | True potential-outcome mean q(x,a); generic fixed outcome nuisance h(x,a) |
++| qhat_i, qhat_i^pi | Held-out prediction for observed action; target-probability-weighted prediction |
++| w, Z, D_i | Nonnegative importance ratio; row score; paired improvement score (not the dataset D) |
++| sigma^2(x,a) | Conditional observed-reward variance under identification |
++| e, e*, Gamma | Nominal binary propensity, sufficient-latent full propensity, finite marginal-odds bound >=1 |
++| m, ell, h_s | Treated success probability, lower/upper inverse-propensity bounds; h_s avoids confusion with outcome nuisance h |
++| s_Z, bar w | Sample SD with denominator n−1; sample mean weight |
++| H, gamma | Sequential horizon H>=1 and discount 0<=gamma<=1; unrelated to sensitivity Gamma |
++| d | Predeclared minimum worthwhile improvement, d>=0 |
++
++**A1 (basic identification regime).** Observations are IID; the potential-reward vector and action satisfy consistency, no interference, and R(a) independent of A given X. For P_X-almost every x, pi(a|x)>0 implies mu(a|x)>0. The target is fixed independently of evaluation outcomes. Assume target-weighted absolute rewards are integrable. Sums with pi=mu=0 are defined to contribute zero rather than evaluating 0/0. Structural support conditions apply to the population, not only sampled rows.
++
++Known full propensities conditional on (X,U) give an alternative identification regime: replace the conditioning set by (X,U) in A1 and require conditional support there. This is not the same as using the marginal propensity e(X).
++
++**A2 (variance).** To interpret M10 as a finite variance and apply a conventional CLT, require E[(wR)^2]<infinity. Finite K and rewards in [0,1] do not alone establish this. Uniform target-support overlap mu>=epsilon>0 with bounded rewards is a convenient sufficient condition. For independent non-identically distributed scores, variance is n^(-2) times the sum of row variances; the manuscript's IID sample-variance formula is not automatically applicable.
++
++### A.2 Independent IPS and DR derivations
++
++Under A1, E[R|X,A=a]=q(X,a). Conditional expectation gives M09. Absolute integrability justifies the finite action sum and outer expectation. Independence is not needed for this one-row identity; IID sampling is needed for the stated common-population sample-mean analysis. Applying total variance conditional on (X,A) gives
++
++\[
++\operatorname{Var}(wR)=E[w^2\sigma^2(X,A)]+\operatorname{Var}(wq(X,A)). \tag{A1}
++\]
++
++Dividing by n under IID yields M10. This is not a proof that either term is finite.
++
++For fixed nuisances b(x,a)>0 on target support and h(x,a), with integrable scores, condition on X:
++
++\[
++E[Z_{DR}\mid X]=\sum_a\pi(a\mid X)\left[h(X,a)+\frac{\mu(a\mid X)}{b(X,a)}(q(X,a)-h(X,a))\right]. \tag{A2}
++\]
++
++Subtracting sum_a pi q gives M13 exactly. If b=mu or h=q, the conditional bias vanishes. Independent nuisance training lets us apply this conditional-on-training identity. Cross-fitting applies it fold by fold; fold scores are not mutually independent merely because each row is held out. Their pooled asymptotic variance requires a negligible fitted-nuisance remainder.
++
++For clipped IPS and R>=0, the bias relative to valid IPS is
++
++\[
++E[(\min(w,c)-w)R]=-E[(w-c)_+R]\le0,\quad c\ge0. \tag{A3}
++\]
++
++This sign does not apply to negative rewards or to signed DR residuals. Switch and shrinkage change the correction and generally introduce model-dependent bias. At lambda=0 define shrunk weights as zero explicitly, including w=0; the unrepaired fraction has 0/0 at that point.
++
++### A.3 When the reported DR standard error is justified
++
++One sufficient regime is IID bounded rewards; fixed F and an independently fixed target; true and fitted propensities bounded below on target support; L2 consistency of both nuisances; and
++
++\[
++\|\hat q-q\|_2\|\hat\mu-\mu\|_2=o_p(n^{-1/2}), \tag{A4}
++\]
++
++with stable finite second moments and a nonzero limiting score variance. Norms may be taken over P_X and the finite action counting measure with uniform boundedness assumptions. Cauchy–Schwarz bounds the bias product from M13; cross-fitting and L2 convergence control empirical-process remainder terms. Then the leading influence function is q^pi(X)+pi(A|X)/mu(A|X)(R−q(X,A))−V, and its sample variance supports asymptotic Wald inference. These are sufficient, not necessary, assumptions. Exact known propensities allow broader outcome-model regimes but still require stable held-out predictions and appropriate moments for the variance approximation.
++
++**Consistency does not imply this regime.** Take one context, target always action 1, true mu(1)=1/4, working b(1)=1/2, true q1=1/2, and h_n(1)=1/2+n^(-1/4), for n>=16. The reward nuisance converges to the truth, yet the DR bias is (1−mu/b)(h_n−q)=n^(-1/4)/2. This dominates n^(-1/2) sampling error. Cross-fitting a deterministic h_n changes nothing. Ordinary centered root-n inference fails despite consistency.
++
++For SNIPS, apply the delta method to f(u,v)=u/v at (E[wR],E[w])=(V,1). Its gradient is (1,−V), giving influence w(R−V), and the plug-in M17. This needs a nonzero denominator and a valid joint CLT; it does not make an all-zero-weight sample evaluable. For paired differences, Var(Z−B)=Var(Z)+Var(B)−2Cov(Z,B), which yields M18 under the same justified sampling regime.
++
++### A.4 Binary sensitivity: necessity, feasibility, and boundaries
++
++Assume binary A and R, a fixed positive-probability context stratum, 0<e<1, and finite Gamma>=1. There exists sufficient latent U so that assignment is independent of both potential outcomes conditional on (X,U). Under the stated odds bound, full propensities are bounded away from both zero and one within this stratum.
++
++Rearranging the lower and upper odds inequalities yields M21. Inverting endpoints gives M22. For m in (0,1), consistency and full-propensity weighting yield M23 and q1=em z1. Let t=q1 and s=1−q1. Then
++
++\[
++em\ell\le t\le emh_s,\quad e(1-m)\ell\le s\le e(1-m)h_s,\quad t+s=1. \tag{A5}
++\]
++
++Intersecting these intervals yields M24–M25. This is a two-variable linear program, independently checked by vertex enumeration in the verification code.
++
++**Feasibility for a single potential mean.** For any t in the interval with 0<t<1, choose P(R(1)=1|X)=t, e*(R(1)=1)=em/t, and e*(R(1)=0)=e(1−m)/(1−t). A5 ensures both assignment probabilities satisfy the odds bound; their population average is e, and the observed treated success rate is m. To accommodate an arbitrary observed control success probability m0, choose R(0) independently of R(1) with mean m0, and let assignment depend only on R(1). Thus the construction matches the binary observed outcome marginals. This establishes attainability for this restricted single-arm mean with otherwise unrestricted latent dependence; it does not establish joint extrema for arbitrary contrasts or additional structural restrictions.
++
++If m=0 or m=1, do not define a conditional average for the absent treated-outcome category. Instead A5 directly yields t=0 or t=1. Finite Gamma with full latent positivity makes these boundaries meaningful at the population level. In a finite sample, observing zero successes does not imply population m=0. Plug-in endpoint collapse can substantially understate uncertainty.
++
++As Gamma increases, the underlying feasible set expands, so lower endpoints cannot increase and upper endpoints cannot decrease. At Gamma=1, ell=h_s=1/e and L=U=m. Independent context strata permit averaging single-arm endpoints using fixed population shares. Changing the target population requires replacing those shares under an explicit transport assumption.
++
++**Statistical status:** the derivation is a population identification argument. It does not provide finite-sample coverage for plug-in endpoints. The referenced quantile-balancing inference theorem for continuous outcomes is not a binary-outcome CI theorem. No such CI guarantee is established in this audit.
++
++### A.5 Counterexamples that delimit claims
++
++1. **Overlap does not imply finite variance.** X uniform on (0,1), mu(1|X)=X, target always 1, R(1)=1. IPS has mean 1 but second moment integral_0^1 (1/x) dx=infinity. This satisfies pointwise support; it violates A2, not A1.
++2. **DR can have larger variance than IPS.** No context; mu(1)=0.1; target always 1; rewards always zero; h1=1. IPS is identically zero; DR=1−10 I(A=1) has mean zero and variance 9. True propensities, bounded rewards, and overlap all hold.
++3. **SNIPS can have larger variance than IPS.** No context; mu=(1/2,1/2); pi=(1/4,3/4); deterministic rewards (1,1/3). For n=1, IPS is always 1/2. SNIPS equals the observed reward, with variance 1/9. Both actions are supported and all weights are positive.
++4. **Same-row reward fitting breaks the conditional DR argument.** With unique contexts, uniform logger and target, and Bernoulli(1/2) rewards, a memorizer predicting the observed reward for the observed action and zero for the other action has zero residual and target prediction R/2. Expected DR is 1/4 rather than the true 1/2. Independent nuisance fitting was violated.
++5. **Exact full propensities versus confounding.** U uniform on {0,1}; mu(1|U)=(0.1,0.9), q1(U)=(0.1,0.9). The true value is 0.5. Marginal propensity 0.5 gives IPS mean 0.82, while exact full-propensity weighting gives 0.5. The marginal odds departure bound needed is Gamma=9.
++6. **Missing support.** A logger always selects A0 with mean reward 0.2. Worlds with q1=0 and q1=1 yield identical observed logs but different always-A1 values. No estimator can distinguish them without extra assumptions.
++7. **Fallback is not a safety theorem.** Baseline selects an action worth 1, proposed policy an action worth 0. A 20% mixture toward the proposal is a valid distribution with value 0.8, still worse than baseline.
++
++The associated automated tests include exact rational calculations, independent scalar implementations, vertex checks, and invalid-input rejection. Cases 1 and 4 are analytic arguments; their generality is not established by numerical testing.
++
++### A.6 Fully specified verification experiments
++
++Primary experiments: X is Bernoulli(1/2), A given X is Bernoulli(e_X), and independent reward uniforms produce Bernoulli(q_XA) outcomes. The target always selects A1. Historical contextual q tables are given in `verification/verify.py`. The regular case reproduces Section 1. Weak overlap sets both e_X=0.0005 and q1=0.5; a second weak-overlap case changes q1 to 0.7 to test sensitivity to the fitted model's prior. The rare-reward case scales the original reward probabilities by 0.01. Every run has n=2,000; each scenario uses 1,000 independently seeded datasets.
++
++Cross-fitting uses five folds defined by a random permutation modulo five. For each held-out fold and each context-action cell, fit (success count+0.5)/(cell count+1) using only the other folds. This yields a defined fallback for empty training cells without inventing overlap. It is an explicit modeling choice, not a confidence guarantee. The fitted model never sees simulator reward means. Oracle DR is reported separately as a diagnostic using evaluator-only truth.
++
++Fixed-nuisance experiments use the regular generator. Wrong action propensities equal 0.5; wrong reward predictions are 0.3 in context 0 and 0.4 in context 1 for both actions. The DR limit is 0.4 if either nuisance is exact and 0.6 if both specified nuisances are wrong. These checks isolate algebra; they do not test the convergence rate of arbitrary fitted ML nuisances.
++
++In the hidden-U experiment the measured context is constant, U is Bernoulli(1/2), e*(U)=(0.1,0.9), and both action-specific reward probabilities are (0.1,0.9) across U. Action/reward uniforms are independent conditional on U. The analyst uses e=0.5. Each batch also computes an explicitly oracle comparator using full propensities.
++
++### A.7 Algorithms, complexity, and the proposed policy-revision extension
++
++Let T_fit(m,K,d) be the chosen nuisance model's training cost on m observations of d features and T_pred(n,K,d) the cost of all-action predictions. F-fold evaluation costs approximately F T_fit(n(1−1/F),K,d)+T_pred(n,K,d)+O(nK); add a separate propensity-training cost if probabilities are fitted. Storing all-action predictions uses O(nK) memory; streaming target-weighted predictions can reduce score-storage memory to O(n), besides model and input memory. IPS with only selected-action probabilities is O(n). SNIPS and ESS are O(n); quantile plots may require O(n log n) sorting. Binary sensitivity with S strata and G Gamma values costs O(n+SG). A score bootstrap with B repetitions costs O(Bn); a full-refit bootstrap also multiplies model-training cost by B. These are operation counts, not measured production latency.
++
++The later chat proposed a context-dependent policy mixture; it is **not an implemented contribution in the original manuscript**. A mathematically valid optional extension is
++
++\[
++\pi_\alpha(a|x)=\alpha(x)\pi(a|x)+(1-\alpha(x))\pi_0(a|x),\quad 0\le\alpha(x)\le1. \tag{A6}
++\]
++
++Policies must share action eligibility. Summing A6 over actions proves normalization. Its value difference is
++
++\[
++V(\pi_\alpha)-V(\pi_0)=E_X\left[\alpha(X)\sum_a(\pi(a|X)-\pi_0(a|X))q(X,a)\right]. \tag{A7}
++\]
++
++The sign is not guaranteed. For context-dependent alpha it is generally wrong to replace this expression by E[alpha] times the unmodified policy improvement. Select alpha on development data, freeze it, then evaluate on independent final data or use a justified simultaneous procedure. A fixed finite candidate grid is a possible experimental specification, not a new theorem or a proven safety mechanism. Baseline bootstrapping is prior art: [Laroche et al., ICML 2019](https://proceedings.mlr.press/v97/laroche19a.html).
++
++For drift, M28 is an exact add-and-subtract identity for population values, not an automatic causal attribution of measured sample differences. If P1 is absolutely continuous with respect to P0 and q1=q0, transport adds the context density ratio to the action weight. Both action support and context support are required.
++
++For unsupported mass u, v+u bounds require known reward range [0,1], known support, and identification of the supported contribution v. With a general reward range [L,U], the corresponding interval is [v+Lu,v+Uu]. This is partial identification, not an ordinary confidence interval.
++
++
++## Appendix B. Executed verification results (30 October 2026)
++
++The audit ran 29 automated tests with 0 failures and 0 errors, plus 1,000 independent datasets in each of four primary scenarios (n=2,000). Five-fold cross-fitting uses smoothed cell means with a prior mean 0.5 and prior count 1. An additional 1,000 independently seeded batches test four fixed-nuisance regimes and hidden confounding. These small tabular simulations are an audit supplement, not a benchmark of a finished product.
++
++| Scenario | Estimator | RMSE | Coverage among defined intervals | MC SE of coverage | Undefined / 1,000 | Mean interval width |
++|---|---|---:|---:|---:|---:|---:|
++| regular | IPS | 0.019700 | 93.70% | 0.77 pp | 0 | 0.075067 |
++| regular | SNIPS | 0.023339 | 94.90% | 0.70 pp | 0 | 0.090560 |
++| regular | DR_crossfit | 0.018776 | 93.80% | 0.76 pp | 0 | 0.071513 |
++| regular | DR_oracle | 0.018710 | 94.70% | 0.71 pp | 0 | 0.071265 |
++| regular | paired_DR_difference | 0.015636 | 93.40% | 0.79 pp | 0 | 0.059101 |
++| weak_overlap | IPS | 0.718331 | 40.90% | 1.55 pp | 0 | 1.777399 |
++| weak_overlap | SNIPS | 0.431688 | 26.56% | 1.75 pp | 360 | 0.332557 |
++| weak_overlap | DR_crossfit | 0.507764 | 98.10% | 0.43 pp | 0 | 1.540651 |
++| weak_overlap | DR_oracle | 0.489387 | 99.70% | 0.17 pp | 0 | 1.534695 |
++| weak_overlap | paired_DR_difference | 0.508599 | 96.50% | 0.58 pp | 0 | 1.555946 |
++| weak_overlap_off_prior | IPS | 0.872468 | 52.40% | 1.58 pp | 0 | 2.403300 |
++| weak_overlap_off_prior | SNIPS | 0.395365 | 23.04% | 1.65 pp | 349 | 0.285325 |
++| weak_overlap_off_prior | DR_crossfit | 0.503314 | 63.90% | 1.52 pp | 0 | 1.552402 |
++| weak_overlap_off_prior | DR_oracle | 0.458661 | 64.50% | 1.51 pp | 0 | 1.365253 |
++| weak_overlap_off_prior | paired_DR_difference | 0.503120 | 63.80% | 1.52 pp | 0 | 1.567201 |
++| rare_reward | IPS | 0.002090 | 90.20% | 0.94 pp | 0 | 0.006752 |
++| rare_reward | SNIPS | 0.002098 | 90.00% | 0.95 pp | 0 | 0.006803 |
++| rare_reward | DR_crossfit | 0.002114 | 90.60% | 0.92 pp | 0 | 0.006883 |
++| rare_reward | DR_oracle | 0.002089 | 90.20% | 0.94 pp | 0 | 0.006752 |
++| rare_reward | paired_DR_difference | 0.001603 | 93.00% | 0.81 pp | 0 | 0.004525 |
++
++Intervals use 1.96 normal critical values. Coverage is empirical, not guaranteed; for SNIPS, undefined results are reported rather than dropped silently. Unconditional successful-coverage rates appear in the JSON. The oracle DR uses the true reward model and is an evaluator-only diagnostic, not an available real-world competitor. Weak-overlap performance at true reward 0.5 is affected by the fitted model's 0.5 prior; the off-prior scenario deliberately sets the truth to 0.7. Thus apparent high coverage in one weak-overlap scenario is not evidence of general reliability.
++
++| Fixed nuisance regime | Mean DR estimate | Monte Carlo SE | Algebraic limit | True value |
++|---|---:|---:|---:|---:|
++| both_correct | 0.399495 | 0.000565 | 0.40 | 0.40 |
++| only_propensity_correct | 0.399607 | 0.000630 | 0.40 | 0.40 |
++| only_outcome_correct | 0.400062 | 0.000498 | 0.40 | 0.40 |
++| both_wrong | 0.600166 | 0.000518 | 0.60 | 0.40 |
++
++In the hidden-U experiment, mean nominal IPS was 0.820290 (population limit 0.82), whereas full-propensity IPS averaged 0.500454 (truth 0.5). This supports the distinction in Section 3.3; it does not establish robustness to arbitrary unmeasured confounding.
++
++Reproduction: `python -X utf8 verification/verify.py` from the companion audit directory. See `results/verification_results.json`, `results/monte_carlo_raw.csv`, and `results/test_log.txt`. General symbolic CAS checks, OBD replication, sensitivity-endpoint confidence guarantees, adaptive/cluster inference, and policy-revision experiments remain unexecuted. Exact rational checks and written derivations replace CAS for the small identities audited here.

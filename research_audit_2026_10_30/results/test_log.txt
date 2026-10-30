@@ -1,0 +1,34 @@
+test_clipping_direction (__main__.MathematicalChecks.test_clipping_direction) ... ok
+test_crossfit_excludes_own_fold (__main__.MathematicalChecks.test_crossfit_excludes_own_fold) ... ok
+test_dr_need_not_reduce_variance (__main__.MathematicalChecks.test_dr_need_not_reduce_variance) ... ok
+test_dr_zero_model_equals_ips (__main__.MathematicalChecks.test_dr_zero_model_equals_ips) ... ok
+test_empty_singleton_variance (__main__.MathematicalChecks.test_empty_singleton_variance) ... ok
+test_ess_bounds_scaling (__main__.MathematicalChecks.test_ess_bounds_scaling) ... ok
+test_exact_dr_bias_identity (__main__.MathematicalChecks.test_exact_dr_bias_identity) ... ok
+test_exact_toy (__main__.MathematicalChecks.test_exact_toy) ... ok
+test_hidden_confounding_and_full_propensity (__main__.MathematicalChecks.test_hidden_confounding_and_full_propensity) ... ok
+test_invalid_policy (__main__.MathematicalChecks.test_invalid_policy) ... ok
+test_invalid_propensity_and_shapes (__main__.MathematicalChecks.test_invalid_propensity_and_shapes) ... ok
+test_ips_variance_decomposition (__main__.MathematicalChecks.test_ips_variance_decomposition) ... ok
+test_missing_support_indistinguishable_worlds (__main__.MathematicalChecks.test_missing_support_indistinguishable_worlds) ... ok
+test_mixture_valid_but_not_safe (__main__.MathematicalChecks.test_mixture_valid_but_not_safe) ... ok
+test_no_match_errors (__main__.MathematicalChecks.test_no_match_errors) ... ok
+test_original_generator_quadrature (__main__.MathematicalChecks.test_original_generator_quadrature) ... ok
+test_paired_variance_identity (__main__.MathematicalChecks.test_paired_variance_identity) ... ok
+test_sensitivity_endpoint_construction (__main__.MathematicalChecks.test_sensitivity_endpoint_construction) ... ok
+test_sensitivity_exact_table (__main__.MathematicalChecks.test_sensitivity_exact_table) ... ok
+test_sensitivity_invalid_domain (__main__.MathematicalChecks.test_sensitivity_invalid_domain) ... ok
+test_sensitivity_null_boundaries_monotonicity (__main__.MathematicalChecks.test_sensitivity_null_boundaries_monotonicity) ... ok
+test_sensitivity_vertex_reference (__main__.MathematicalChecks.test_sensitivity_vertex_reference) ... ok
+test_shrinkage_zero_defined (__main__.MathematicalChecks.test_shrinkage_zero_defined) ... ok
+test_snips_delta_gradient (__main__.MathematicalChecks.test_snips_delta_gradient) ... ok
+test_snips_need_not_reduce_variance (__main__.MathematicalChecks.test_snips_need_not_reduce_variance) ... ok
+test_snips_range (__main__.MathematicalChecks.test_snips_range) ... ok
+test_support_not_sample_match (__main__.MathematicalChecks.test_support_not_sample_match) ... ok
+test_target_equals_logger (__main__.MathematicalChecks.test_target_equals_logger) ... ok
+test_vector_matches_independent_reference (__main__.MathematicalChecks.test_vector_matches_independent_reference) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.340s
+
+OK

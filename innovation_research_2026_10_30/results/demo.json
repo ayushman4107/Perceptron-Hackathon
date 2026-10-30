@@ -1,0 +1,40 @@
+{
+  "seed": 1010000,
+  "selection_rule": "first seed in frozen primary experiment; no seed search",
+  "warning": "Reference is another candidate, NOT the historical logger; cancellation does not solve target-versus-logger missing support.",
+  "counts": [
+    [
+      748,
+      745,
+      0
+    ],
+    [
+      780,
+      727,
+      0
+    ]
+  ],
+  "separate_value_contrast": [
+    -0.2369335171187839,
+    0.7081725751786572
+  ],
+  "joint_contrast": [
+    0.1630664828812161,
+    0.3081725751786572
+  ],
+  "established_robust_reference": [
+    0.1630664828812161,
+    0.3081725751786572
+  ],
+  "paired_DR_Wald": [
+    0.21596747508218875,
+    0.255146201311335
+  ],
+  "oracle_true_contrast_revealed_after_estimation": 0.24,
+  "separate_before_after_population_example": {
+    "old_action0_mean": 0.32000000000000006,
+    "new_action1_mean": 0.58,
+    "naive_time_difference": 0.2599999999999999,
+    "same_new_population_policy_difference": -0.10000000000000007
+  }
+}

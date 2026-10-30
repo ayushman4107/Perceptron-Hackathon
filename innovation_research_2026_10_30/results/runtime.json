@@ -1,0 +1,59 @@
+{
+  "projection": [
+    {
+      "cells": 2,
+      "actions": 3,
+      "policies": 2,
+      "median_seconds": 0.00011150003410875797
+    },
+    {
+      "cells": 2,
+      "actions": 3,
+      "policies": 32,
+      "median_seconds": 0.0017222999595105648
+    },
+    {
+      "cells": 2,
+      "actions": 3,
+      "policies": 128,
+      "median_seconds": 0.006955600110813975
+    },
+    {
+      "cells": 100,
+      "actions": 3,
+      "policies": 2,
+      "median_seconds": 0.00011659995652735233
+    },
+    {
+      "cells": 100,
+      "actions": 3,
+      "policies": 32,
+      "median_seconds": 0.00182819995097816
+    },
+    {
+      "cells": 100,
+      "actions": 3,
+      "policies": 128,
+      "median_seconds": 0.00730910012498498
+    },
+    {
+      "cells": 1000,
+      "actions": 3,
+      "policies": 2,
+      "median_seconds": 0.00016520009376108646
+    },
+    {
+      "cells": 1000,
+      "actions": 3,
+      "policies": 32,
+      "median_seconds": 0.0026473000179976225
+    },
+    {
+      "cells": 1000,
+      "actions": 3,
+      "policies": 128,
+      "median_seconds": 0.010638300096616149
+    }
+  ],
+  "aggregate_100000_median_seconds": 0.000421999953687191
+}

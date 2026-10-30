@@ -1,0 +1,22 @@
+test_cancellation_identity (test_core.Checks.test_cancellation_identity) ... ok
+test_empty (test_core.Checks.test_empty) ... ok
+test_hidden_world (test_core.Checks.test_hidden_world) ... ok
+test_identical_value_worlds_different_policy_gap (test_core.Checks.test_identical_value_worlds_different_policy_gap) ... ok
+test_invalid (test_core.Checks.test_invalid) ... ok
+test_known_answer (test_core.Checks.test_known_answer) ... ok
+test_logger_missing_mass (test_core.Checks.test_logger_missing_mass) ... ok
+test_missing_predicted_not_known (test_core.Checks.test_missing_predicted_not_known) ... ok
+test_no_false_precision_from_one_row (test_core.Checks.test_no_false_precision_from_one_row) ... ok
+test_reproducibility (test_core.Checks.test_reproducibility) ... ok
+test_shift_reversal (test_core.Checks.test_shift_reversal) ... ok
+test_support_distinction (test_core.Checks.test_support_distinction) ... ok
+test_truth_containment_and_selection (test_core.Checks.test_truth_containment_and_selection) ... ok
+test_unchanged (test_core.Checks.test_unchanged) ... ok
+test_vertex_reference (test_core.Checks.test_vertex_reference) ... ok
+test_width (test_core.Checks.test_width) ... ok
+test_zero_reward_not_zero_uncertainty (test_core.Checks.test_zero_reward_not_zero_uncertainty) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.407s
+
+OK

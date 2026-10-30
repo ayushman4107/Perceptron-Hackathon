@@ -1,0 +1,9209 @@
+{
+  "logs": 8000,
+  "tests": 13,
+  "elapsed_seconds": 488.61209069984034,
+  "primary_paired_difference": {
+    "mean": 0.0,
+    "mcse": 0.0028312598015950876,
+    "normal95": [
+      -0.0055492692111263715,
+      0.0055492692111263715
+    ]
+  },
+  "empirical_primary_power_gate_passed": false,
+  "summaries": [
+    {
+      "scenario": "rare",
+      "n": 6000,
+      "method": "split_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.106,
+        "mcse": 0.013766916866168693,
+        "wilson95": [
+          0.08195666053446124,
+          0.1360515388678906
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0012747352571158502,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.01492526474288415,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.0962828288059749,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "rare",
+      "n": 6000,
+      "method": "mixture_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0162,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.12973384337725832,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "rare",
+      "n": 6000,
+      "method": "KL_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0162,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.13321263372163203,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "rare",
+      "n": 6000,
+      "method": "Hoeffding_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0162,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.2701002900513107,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "rare",
+      "n": 6000,
+      "method": "Wald_Bonferroni",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.47,
+        "mcse": 0.022320394261750844,
+        "wilson95": [
+          0.4266472654581187,
+          0.5138102116537354
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.007374644637747396,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.008825355362252606,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.846,
+        "defined": 500,
+        "mcse": 0.016142118820031033,
+        "wilson95": [
+          0.8117339597150403,
+          0.8749898042615746
+        ]
+      },
+      "primary_width": {
+        "mean": 0.0322385886846246,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "rare",
+      "n": 6000,
+      "method": "retain_logger",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0162,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": null,
+        "defined": 0
+      },
+      "primary_width": {
+        "mean": null,
+        "defined": 0
+      },
+      "undefined": {
+        "mean": 31.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "rare",
+      "n": 60000,
+      "method": "split_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.996,
+        "mcse": 0.002822764602300377,
+        "wilson95": [
+          0.9855339859585811,
+          0.9989023924587627
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0161352,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 6.480000000000002e-05,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.028578376562088437,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "rare",
+      "n": 60000,
+      "method": "mixture_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0162,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.03934749956778238,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "rare",
+      "n": 60000,
+      "method": "KL_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.996,
+        "mcse": 0.002822764602300377,
+        "wilson95": [
+          0.9855339859585811,
+          0.9989023924587627
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.015163025557905637,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.001036974442094363,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.03705746852623475,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "rare",
+      "n": 60000,
+      "method": "Hoeffding_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0162,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.09863642399405079,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "rare",
+      "n": 60000,
+      "method": "Wald_Bonferroni",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0162,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.968,
+        "defined": 500,
+        "mcse": 0.007870959280799264,
+        "wilson95": [
+          0.9486546984063574,
+          0.980208658648717
+        ]
+      },
+      "primary_width": {
+        "mean": 0.010316133464062939,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "rare",
+      "n": 60000,
+      "method": "retain_logger",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0162,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": null,
+        "defined": 0
+      },
+      "primary_width": {
+        "mean": null,
+        "defined": 0
+      },
+      "undefined": {
+        "mean": 31.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "regular",
+      "n": 6000,
+      "method": "split_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.858,
+        "mcse": 0.01560999679692472,
+        "wilson95": [
+          0.8246696706783865,
+          0.8858711024534867
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.146704039418363,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.03329596058163703,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.3135906552897986,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "regular",
+      "n": 6000,
+      "method": "mixture_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.71,
+        "mcse": 0.020292855885754475,
+        "wilson95": [
+          0.6687444142064393,
+          0.7480532460105812
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.12403040731716229,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.055969592682837715,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.36071265271505604,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "regular",
+      "n": 6000,
+      "method": "KL_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.118,
+        "mcse": 0.014427473791346842,
+        "wilson95": [
+          0.09259259259259259,
+          0.14923261596501758
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.009792823687676783,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.1702071763123232,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.4497555123858707,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "regular",
+      "n": 6000,
+      "method": "Hoeffding_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.006,
+        "mcse": 0.0034536936748935914,
+        "wilson95": [
+          0.002042559297638913,
+          0.017490563810893606
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0004760761034642954,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.1795239238965357,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.5005283908794932,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "regular",
+      "n": 6000,
+      "method": "Wald_Bonferroni",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.18,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.982,
+        "defined": 500,
+        "mcse": 0.005945754788082,
+        "wilson95": [
+          0.9661479527879661,
+          0.9905019149482431
+        ]
+      },
+      "primary_width": {
+        "mean": 0.11773545625324595,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "regular",
+      "n": 6000,
+      "method": "retain_logger",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.18,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": null,
+        "defined": 0
+      },
+      "primary_width": {
+        "mean": null,
+        "defined": 0
+      },
+      "undefined": {
+        "mean": 31.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "regular",
+      "n": 60000,
+      "method": "split_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.18,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.10222691632432583,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "regular",
+      "n": 60000,
+      "method": "mixture_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.18,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.13731434915563295,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "regular",
+      "n": 60000,
+      "method": "KL_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.18,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.14675541302467315,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "regular",
+      "n": 60000,
+      "method": "Hoeffding_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.18,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.1575805241632989,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "regular",
+      "n": 60000,
+      "method": "Wald_Bonferroni",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.18,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.988,
+        "defined": 500,
+        "mcse": 0.004869496893930627,
+        "wilson95": [
+          0.9740692922810136,
+          0.9944890800328247
+        ]
+      },
+      "primary_width": {
+        "mean": 0.037210623760006854,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "regular",
+      "n": 60000,
+      "method": "retain_logger",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.18,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": null,
+        "defined": 0
+      },
+      "primary_width": {
+        "mean": null,
+        "defined": 0
+      },
+      "undefined": {
+        "mean": 31.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "null_rare",
+      "n": 6000,
+      "method": "split_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 8.673617379884035e-19,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.08789015876966322,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "null_rare",
+      "n": 6000,
+      "method": "mixture_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 8.673617379884035e-19,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.11804936137463279,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "null_rare",
+      "n": 6000,
+      "method": "KL_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 8.673617379884035e-19,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.12517573989732897,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "null_rare",
+      "n": 6000,
+      "method": "Hoeffding_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 8.673617379884035e-19,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.2682433363579998,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "null_rare",
+      "n": 6000,
+      "method": "Wald_Bonferroni",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 8.673617379884035e-19,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.802,
+        "defined": 500,
+        "mcse": 0.017821111076473318,
+        "wilson95": [
+          0.7648252982841597,
+          0.8345694321231747
+        ]
+      },
+      "primary_width": {
+        "mean": 0.023864059868764977,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "null_rare",
+      "n": 6000,
+      "method": "retain_logger",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 8.673617379884035e-19,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": null,
+        "defined": 0
+      },
+      "primary_width": {
+        "mean": null,
+        "defined": 0
+      },
+      "undefined": {
+        "mean": 31.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "null_rare",
+      "n": 60000,
+      "method": "split_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 8.673617379884035e-19,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.022602460830499632,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "null_rare",
+      "n": 60000,
+      "method": "mixture_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 8.673617379884035e-19,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.03125790843632138,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "null_rare",
+      "n": 60000,
+      "method": "KL_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 8.673617379884035e-19,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.032087890420257864,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "null_rare",
+      "n": 60000,
+      "method": "Hoeffding_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 8.673617379884035e-19,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.09683086692799794,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "null_rare",
+      "n": 60000,
+      "method": "Wald_Bonferroni",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.002,
+        "mcse": 0.0019979989989987483,
+        "wilson95": [
+          0.000353127309584542,
+          0.011240992747195207
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": -8.673617379884036e-22,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 8.682290997263919e-19,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.978,
+        "defined": 500,
+        "mcse": 0.006559878047646925,
+        "wilson95": [
+          0.9610387448516022,
+          0.9876721198328542
+        ]
+      },
+      "primary_width": {
+        "mean": 0.007693249652595386,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "null_rare",
+      "n": 60000,
+      "method": "retain_logger",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 8.673617379884035e-19,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": null,
+        "defined": 0
+      },
+      "primary_width": {
+        "mean": null,
+        "defined": 0
+      },
+      "undefined": {
+        "mean": 31.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "heterogeneous",
+      "n": 6000,
+      "method": "split_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.02,
+        "mcse": 0.006260990336999411,
+        "wilson95": [
+          0.010899065235569357,
+          0.03642056855409787
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0006048468625372514,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.03394026195028238,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.2070691085345569,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "heterogeneous",
+      "n": 6000,
+      "method": "mixture_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.034545108812819636,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.24444694299020325,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "heterogeneous",
+      "n": 6000,
+      "method": "KL_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.034545108812819636,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.28983414359744575,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "heterogeneous",
+      "n": 6000,
+      "method": "Hoeffding_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.034545108812819636,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.41229621339461575,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "heterogeneous",
+      "n": 6000,
+      "method": "Wald_Bonferroni",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.918,
+        "mcse": 0.012269963325128561,
+        "wilson95": [
+          0.8906445762331059,
+          0.938981242675059
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.02943147140852045,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.005113637404299173,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.98,
+        "defined": 500,
+        "mcse": 0.006260990336999414,
+        "wilson95": [
+          0.9635794314459021,
+          0.9891009347644306
+        ]
+      },
+      "primary_width": {
+        "mean": 0.07790953524695612,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "heterogeneous",
+      "n": 6000,
+      "method": "retain_logger",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.034545108812819636,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": null,
+        "defined": 0
+      },
+      "primary_width": {
+        "mean": null,
+        "defined": 0
+      },
+      "undefined": {
+        "mean": 31.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "heterogeneous",
+      "n": 60000,
+      "method": "split_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.998,
+        "mcse": 0.001997998998998749,
+        "wilson95": [
+          0.9887590072528046,
+          0.9996468726904154
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.033590229038651644,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0009548797741679802,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.06780846839942363,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "heterogeneous",
+      "n": 60000,
+      "method": "mixture_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.03213556002868368,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0024095487841359472,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.09117031423027697,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "heterogeneous",
+      "n": 60000,
+      "method": "KL_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.02979055272983708,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.00475455608298254,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.09120381375368021,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "heterogeneous",
+      "n": 60000,
+      "method": "Hoeffding_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.936,
+        "mcse": 0.01094568408095172,
+        "wilson95": [
+          0.9110470662066095,
+          0.954304266434443
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.027299985996229417,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.007245122816590202,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.1369337878957175,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "heterogeneous",
+      "n": 60000,
+      "method": "Wald_Bonferroni",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.034515328085450464,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 2.978072736916726e-05,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.99,
+        "defined": 500,
+        "mcse": 0.0044497190922574,
+        "wilson95": [
+          0.976806564621235,
+          0.9957213092184797
+        ]
+      },
+      "primary_width": {
+        "mean": 0.024680995353810097,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "heterogeneous",
+      "n": 60000,
+      "method": "retain_logger",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.034545108812819636,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": null,
+        "defined": 0
+      },
+      "primary_width": {
+        "mean": null,
+        "defined": 0
+      },
+      "undefined": {
+        "mean": 31.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "weak_overlap",
+      "n": 6000,
+      "method": "split_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.09990000000000002,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 1.02528640450021,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "weak_overlap",
+      "n": 6000,
+      "method": "mixture_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.09990000000000002,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 1.043609247095731,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "weak_overlap",
+      "n": 6000,
+      "method": "KL_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.09990000000000002,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 1.0700070139943698,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "weak_overlap",
+      "n": 6000,
+      "method": "Hoeffding_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.09990000000000002,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 1.130006924479656,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "weak_overlap",
+      "n": 6000,
+      "method": "Wald_Bonferroni",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.006,
+        "mcse": 0.0034536936748935914,
+        "wilson95": [
+          0.002042559297638913,
+          0.017490563810893606
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.00031311357103255675,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.09958688642896746,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.25,
+        "defined": 4,
+        "mcse": 0.21650635094610965,
+        "wilson95": [
+          0.045586062644636216,
+          0.6993639475573634
+        ]
+      },
+      "primary_width": {
+        "mean": 0.23402460342750392,
+        "defined": 4
+      },
+      "undefined": {
+        "mean": 30.752,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "weak_overlap",
+      "n": 6000,
+      "method": "retain_logger",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.09990000000000002,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": null,
+        "defined": 0
+      },
+      "primary_width": {
+        "mean": null,
+        "defined": 0
+      },
+      "undefined": {
+        "mean": 31.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "weak_overlap",
+      "n": 60000,
+      "method": "split_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.09990000000000002,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.7039636775411647,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "weak_overlap",
+      "n": 60000,
+      "method": "mixture_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.09990000000000002,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.7988595211141897,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "weak_overlap",
+      "n": 60000,
+      "method": "KL_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.09990000000000002,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.803047222240867,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "weak_overlap",
+      "n": 60000,
+      "method": "Hoeffding_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.09990000000000002,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.8831276554347322,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "weak_overlap",
+      "n": 60000,
+      "method": "Wald_Bonferroni",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.182,
+        "mcse": 0.01725549187939886,
+        "wilson95": [
+          0.15064591449727432,
+          0.21820334288838023
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.011023947837204052,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.08887605216279597,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.7835671342685371,
+        "defined": 499,
+        "mcse": 0.018435267258253278,
+        "wilson95": [
+          0.7453407742401497,
+          0.8174607123512541
+        ]
+      },
+      "primary_width": {
+        "mean": 0.3078291860233831,
+        "defined": 499
+      },
+      "undefined": {
+        "mean": 0.062,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "weak_overlap",
+      "n": 60000,
+      "method": "retain_logger",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.09990000000000002,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": null,
+        "defined": 0
+      },
+      "primary_width": {
+        "mean": null,
+        "defined": 0
+      },
+      "undefined": {
+        "mean": 31.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "many_strata",
+      "n": 6000,
+      "method": "split_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.016199999999999996,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.19591265112117828,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "many_strata",
+      "n": 6000,
+      "method": "mixture_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.016199999999999996,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.29550004377849265,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "many_strata",
+      "n": 6000,
+      "method": "KL_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.016199999999999996,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.4026480649315948,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "many_strata",
+      "n": 6000,
+      "method": "Hoeffding_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.016199999999999996,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.5780944001700861,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "many_strata",
+      "n": 6000,
+      "method": "Wald_Bonferroni",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.478,
+        "mcse": 0.0223390241505756,
+        "wilson95": [
+          0.43455017112738104,
+          0.5217853120879786
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.007360024647994516,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.008839975352005482,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.802,
+        "defined": 500,
+        "mcse": 0.017821111076473318,
+        "wilson95": [
+          0.7648252982841597,
+          0.8345694321231747
+        ]
+      },
+      "primary_width": {
+        "mean": 0.03189596797677621,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "many_strata",
+      "n": 6000,
+      "method": "retain_logger",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.016199999999999996,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": null,
+        "defined": 0
+      },
+      "primary_width": {
+        "mean": null,
+        "defined": 0
+      },
+      "undefined": {
+        "mean": 31.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "many_strata",
+      "n": 60000,
+      "method": "split_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.482,
+        "mcse": 0.022346185356789647,
+        "wilson95": [
+          0.43850579699662956,
+          0.5257686892704829
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.007610685207434625,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.008589314792565372,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.05613944431095948,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "many_strata",
+      "n": 60000,
+      "method": "mixture_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.016199999999999996,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.07573783824760878,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "many_strata",
+      "n": 60000,
+      "method": "KL_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.016199999999999996,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.08632203688933977,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "many_strata",
+      "n": 60000,
+      "method": "Hoeffding_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.016199999999999996,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 0.19358024951278952,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "many_strata",
+      "n": 60000,
+      "method": "Wald_Bonferroni",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.016199999999999996,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.962,
+        "defined": 500,
+        "mcse": 0.008550555537507495,
+        "wilson95": [
+          0.9414147746007343,
+          0.9755400778767108
+        ]
+      },
+      "primary_width": {
+        "mean": 0.010282266908174714,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "many_strata",
+      "n": 60000,
+      "method": "retain_logger",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.016199999999999996,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": null,
+        "defined": 0
+      },
+      "primary_width": {
+        "mean": null,
+        "defined": 0
+      },
+      "undefined": {
+        "mean": 31.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "no_overlap",
+      "n": 6000,
+      "method": "split_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.018000000000000006,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 1.0076155380852418,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "no_overlap",
+      "n": 6000,
+      "method": "mixture_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.018000000000000006,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 1.0104491546595225,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "no_overlap",
+      "n": 6000,
+      "method": "KL_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.018000000000000006,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 1.0138616867319243,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "no_overlap",
+      "n": 6000,
+      "method": "Hoeffding_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.018000000000000006,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 1.0676128248552827,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "no_overlap",
+      "n": 6000,
+      "method": "Wald_Bonferroni",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.018000000000000006,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": null,
+        "defined": 0
+      },
+      "primary_width": {
+        "mean": null,
+        "defined": 0
+      },
+      "undefined": {
+        "mean": 31.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "no_overlap",
+      "n": 6000,
+      "method": "retain_logger",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.018000000000000006,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": null,
+        "defined": 0
+      },
+      "primary_width": {
+        "mean": null,
+        "defined": 0
+      },
+      "undefined": {
+        "mean": 31.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "no_overlap",
+      "n": 60000,
+      "method": "split_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.018000000000000006,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 1.0024142092339103,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "no_overlap",
+      "n": 60000,
+      "method": "mixture_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.018000000000000006,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 1.0033481956469676,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "no_overlap",
+      "n": 60000,
+      "method": "KL_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.018000000000000006,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 1.0037749673499001,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "no_overlap",
+      "n": 60000,
+      "method": "Hoeffding_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.018000000000000006,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 1.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "primary_width": {
+        "mean": 1.0227648107461231,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "no_overlap",
+      "n": 60000,
+      "method": "Wald_Bonferroni",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.018000000000000006,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": null,
+        "defined": 0
+      },
+      "primary_width": {
+        "mean": null,
+        "defined": 0
+      },
+      "undefined": {
+        "mean": 31.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "no_overlap",
+      "n": 60000,
+      "method": "retain_logger",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.018000000000000006,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": null,
+        "defined": 0
+      },
+      "primary_width": {
+        "mean": null,
+        "defined": 0
+      },
+      "undefined": {
+        "mean": 31.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "hidden_confounding",
+      "n": 6000,
+      "method": "split_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "harm": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "gain": {
+        "mean": -0.05,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.05,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "primary_width": {
+        "mean": 0.0987974415242128,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "hidden_confounding",
+      "n": 6000,
+      "method": "mixture_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "harm": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "gain": {
+        "mean": -0.05,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.05,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "primary_width": {
+        "mean": 0.11800927059351318,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "hidden_confounding",
+      "n": 6000,
+      "method": "KL_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "harm": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "gain": {
+        "mean": -0.05,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.05,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "primary_width": {
+        "mean": 0.16090980240713015,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "hidden_confounding",
+      "n": 6000,
+      "method": "Hoeffding_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "harm": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "gain": {
+        "mean": -0.04913857507430166,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.04913857507430166,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "primary_width": {
+        "mean": 0.18580759163692354,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "hidden_confounding",
+      "n": 6000,
+      "method": "Wald_Bonferroni",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "harm": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "gain": {
+        "mean": -0.05,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.05,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "primary_width": {
+        "mean": 0.03583411304662151,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "hidden_confounding",
+      "n": 6000,
+      "method": "retain_logger",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": null,
+        "defined": 0
+      },
+      "primary_width": {
+        "mean": null,
+        "defined": 0
+      },
+      "undefined": {
+        "mean": 31.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "hidden_confounding",
+      "n": 60000,
+      "method": "split_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "harm": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "gain": {
+        "mean": -0.05,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.05,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "primary_width": {
+        "mean": 0.030960181506804674,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "hidden_confounding",
+      "n": 60000,
+      "method": "mixture_LR",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "harm": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "gain": {
+        "mean": -0.05,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.05,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "primary_width": {
+        "mean": 0.04326646588848932,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "hidden_confounding",
+      "n": 60000,
+      "method": "KL_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "harm": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "gain": {
+        "mean": -0.05,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.05,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "primary_width": {
+        "mean": 0.051277297453690855,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "hidden_confounding",
+      "n": 60000,
+      "method": "Hoeffding_box",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "harm": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "gain": {
+        "mean": -0.05,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.05,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "primary_width": {
+        "mean": 0.05870917420077235,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "hidden_confounding",
+      "n": 60000,
+      "method": "Wald_Bonferroni",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "harm": {
+        "mean": 1.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.9923753814690964,
+          0.9999999999999999
+        ]
+      },
+      "gain": {
+        "mean": -0.05,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.05,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": 0.0,
+        "defined": 500,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "primary_width": {
+        "mean": 0.011336659792822666,
+        "defined": 500
+      },
+      "undefined": {
+        "mean": 0.0,
+        "defined": 500
+      }
+    },
+    {
+      "scenario": "hidden_confounding",
+      "n": 60000,
+      "method": "retain_logger",
+      "repetitions": 500,
+      "benefit": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "false_improvement": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "harm": {
+        "mean": 0.0,
+        "mcse": 0.0,
+        "wilson95": [
+          0.0,
+          0.007624618530903363
+        ]
+      },
+      "gain": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "regret": {
+        "mean": 0.0,
+        "defined": 500
+      },
+      "family_coverage": {
+        "mean": null,
+        "defined": 0
+      },
+      "primary_width": {
+        "mean": null,
+        "defined": 0
+      },
+      "undefined": {
+        "mean": 31.0,
+        "defined": 500
+      }
+    }
+  ],
+  "primary_decisions": [
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 0,
+      "mixture_LR": 1,
+      "KL_box": 0,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 0,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 0,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    },
+    {
+      "split_LR": 1,
+      "mixture_LR": 1,
+      "KL_box": 1,
+      "Hoeffding_box": 0,
+      "Wald_Bonferroni": 1,
+      "retain_logger": 0
+    }
+  ],
+  "novelty_status": "Application of established likelihood inference; unique/new algorithm NOT established"
+}

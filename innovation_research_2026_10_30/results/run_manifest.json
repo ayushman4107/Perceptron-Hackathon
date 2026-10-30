@@ -1,0 +1,12 @@
+{
+  "protocol_sha256": "1b44509e27703a95274b141e317603de8454061657fb1bf83ce3ef2e3c8564d4",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "repetitions": 1000,
+  "source_sha256": {
+    "run_experiments.py": "3615bc6d193335293706bdf4a0ceb74515a1b83a2e4464f337093337b1070ab9",
+    "src\\core.py": "9a5c09dbb1a6cfbf68794d7391726709f6dfd45d2063774cf5c77e9a8c951b35",
+    "src\\simulation.py": "e25fe4d6f6966c0fe8b34a8a0e6007e8c7f259eb6a27c3ce54f3542736ce38eb",
+    "tests\\test_core.py": "edaac02b14c796e31a2bdab61309560dd0ad89c5d8c5da1dfec8dba630022387"
+  }
+}

@@ -1,0 +1,18 @@
+test_box_inversion (test_likelihood.Checks.test_box_inversion) ... ok
+test_domains (test_likelihood.Checks.test_domains) ... ok
+test_empty_cell (test_likelihood.Checks.test_empty_cell) ... ok
+test_grid_and_dual (test_likelihood.Checks.test_grid_and_dual) ... ok
+test_identical_policy (test_likelihood.Checks.test_identical_policy) ... ok
+test_kl (test_likelihood.Checks.test_kl) ... ok
+test_lr_expectation (test_likelihood.Checks.test_lr_expectation) ... ok
+test_mixture_empty (test_likelihood.Checks.test_mixture_empty) ... ok
+test_mixture_evalue_expectation (test_likelihood.Checks.test_mixture_evalue_expectation) ... ok
+test_radius_monotonicity (test_likelihood.Checks.test_radius_monotonicity) ... ok
+test_simultaneous_containment (test_likelihood.Checks.test_simultaneous_containment) ... ok
+test_single_binomial_zero (test_likelihood.Checks.test_single_binomial_zero) ... ok
+test_tilted_optimality (test_likelihood.Checks.test_tilted_optimality) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.796s
+
+OK

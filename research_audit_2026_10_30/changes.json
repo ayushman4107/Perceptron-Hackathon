@@ -1,0 +1,112 @@
+[
+  {
+    "issue": "E01",
+    "old": "problem-focuse56d",
+    "new": "problem-focused"
+  },
+  {
+    "issue": "S01",
+    "old": "**Research cutoff: 28 October 2026**",
+    "new": "**Research cutoff: 28 October 2026; mathematical audit and revision: 30 October 2026**"
+  },
+  {
+    "issue": "S01",
+    "old": "No Open Bandit experiment was run for this dossier.",
+    "new": "No Open Bandit experiment was run for this dossier. This revision adds independently derived conditions and an executed synthetic verification supplement. The original file remains unchanged. This is a research dossier and project specification, not a completed novel-algorithm manuscript. See Appendix A for the mathematical specification and Appendix B for measured audit results."
+  },
+  {
+    "issue": "N01",
+    "old": "split rows into K folds, fit nuisance models on K−1 folds",
+    "new": "split rows into F folds, fit nuisance models on F−1 folds"
+  },
+  {
+    "issue": "N01",
+    "old": "Write \\(w_i=\\pi(A_i\\mid X_i)/p_i\\), and \\(\\hat q_i^\\pi=\\sum_a\\pi(a\\mid X_i)\\hat q(X_i,a)\\).",
+    "new": "Write \\(w_i=\\pi(A_i\\mid X_i)/p_i\\), \\(\\hat q_i=\\hat q(X_i,A_i)\\), and \\(\\hat q_i^\\pi=\\sum_a\\pi(a\\mid X_i)\\hat q(X_i,a)\\). Here n is the number of observations, K the number of actions, and F the number of cross-fitting folds. For held-out scores, each row uses the nuisance model fitted without its fold. Appendix A gives domains and explicit conditions."
+  },
+  {
+    "issue": "M01",
+    "old": "Simple formulas below assume independent observations and a fixed environment.",
+    "new": "Unless explicitly stated otherwise, the sample-mean variance and Wald formulas below assume IID observations from a fixed population and logger, a target policy fixed independently of evaluation outcomes, and the moment conditions in Appendix A. Independence alone does not supply identical-distribution or finite-variance conditions."
+  },
+  {
+    "issue": "M02",
+    "old": "Predictive calibration under the logging distribution is necessary evidence, not proof of counterfactual calibration.",
+    "new": "Held-out predictive calibration is useful diagnostic evidence, not a necessary condition for unbiased IPS or DR with exact propensities, and not proof of counterfactual calibration."
+  },
+  {
+    "issue": "M03",
+    "old": "If \\(\\tilde\\mu\\) and \\(\\tilde q\\) are their probability and reward limits, the bias term is",
+    "new": "For any fixed measurable nuisance functions \\(\\tilde\\mu,\\tilde q\\), with positive fitted propensities on target support and sufficient integrability, the conditional bias is exactly the following expression. Interpreting these functions as probability limits additionally requires convergence and uniform-integrability conditions; the algebra alone does not justify exchanging limits and expectations. The bias is"
+  },
+  {
+    "issue": "M04",
+    "old": "This is an approximation with finite-moment, nuisance-rate, and sampling assumptions.",
+    "new": "Here \\(s_Z^2=(n-1)^{-1}\\sum_i(Z_i-\\bar Z)^2\\), with n at least 2. This is an approximation with finite-moment, nuisance-rate, and sampling assumptions. For estimated nuisances, double robustness of consistency alone does not justify this standard error. Appendix A states one sufficient regime and a counterexample to inference from consistency alone."
+  },
+  {
+    "issue": "M05",
+    "old": "This limits variance but introduces bias.",
+    "new": "For nonnegative rewards and a fixed nonnegative cap, this can reduce variance at the expense of bias; a data-selected cap needs separate analysis. For signed rewards, a general variance-reduction or bias-sign claim is not implied."
+  },
+  {
+    "issue": "N02",
+    "old": "\\(\\tilde w=\\lambda w/(w^2+\\lambda)\\)",
+    "new": "\\(\\tilde w=\\lambda w/(w^2+\\lambda)\\) for finite \\(w\\ge0\\) and \\(\\lambda>0\\), with \\(\\tilde w=0\\) defined explicitly when \\(\\lambda=0\\)"
+  },
+  {
+    "issue": "M06",
+    "old": "Use **a controlled synthetic benchmark as the primary proof of correctness**",
+    "new": "Use **a controlled synthetic benchmark as the primary empirical verification**"
+  },
+  {
+    "issue": "M07",
+    "old": "These endpoints were calculated from the displayed formulas.",
+    "new": "These endpoints were calculated from the displayed formulas and independently checked against two-variable linear-program vertex enumeration in the audit. The derivation requires 0<e<1, 0<=m<=1, and finite Gamma>=1. Appendix A supplies a feasibility construction and handles m=0 and m=1 without conditioning on null-probability cells."
+  },
+  {
+    "issue": "M07",
+    "old": "This is an elementary derivation for the restricted binary, single-potential-outcome setting from the odds and normalization constraints.",
+    "new": "This is an elementary derivation for the restricted binary, single-potential-outcome setting from the odds and normalization constraints. It assumes consistency and exchangeability conditional on a sufficient latent U, nominal e=P(A=1|X), and the marginal odds restriction. It does not impose the original known randomized assignment mechanism as an additional fixed constraint: the sensitivity exercise allows alternative hidden-assignment mechanisms consistent with the observed law."
+  },
+  {
+    "issue": "M08",
+    "old": "For finite data, plug-in values of e, m, and stratum frequencies are **estimated bound endpoints**, not automatically confidence limits.",
+    "new": "For finite data, plug-in values of e, m, and stratum frequencies are **estimated bound endpoints**, not automatically confidence limits. If a stratum has no treated observations, m is undefined; if its empirical e is 0 or 1, these formulas must not be used by adding an arbitrary epsilon. An empirically empty cell is not proof of structural zero support. Report insufficient information or use a separately justified observation model."
+  },
+  {
+    "issue": "M08",
+    "old": "For continuous covariates and outcomes, naive independent weight boxes ignore compatibility constraints.",
+    "new": "For continuous covariates and outcomes, naive independent weight boxes ignore compatibility constraints. Dorn and Guo's identification results include discrete outcomes, but the cited paper's particular quantile-regression confidence-interval theorems assume continuous outcome densities. They cannot be imported unchanged to this binary-reward implementation."
+  },
+  {
+    "issue": "M09",
+    "old": "Generate a measured X and latent U. Let:",
+    "new": "Generate a measured X and latent U from a specified joint distribution; generate action and potential-reward randomization independently conditional on (X,U). Without this independence, merely specifying the two conditional marginals below does not ensure exchangeability. The equations describe a family of generators, not a fully specified reproducible experiment. One possible form is:"
+  },
+  {
+    "issue": "M10",
+    "old": "Report n, ESS, ESS/n, number of clicks,",
+    "new": "The ESS expression requires finite nonnegative weights with a positive sum. It is undefined for an empty sample or all-zero weights; the sample-mean variance also requires n>=2. These diagnostics do not certify action support away from observed rows. Report n, ESS, ESS/n, number of clicks,"
+  },
+  {
+    "issue": "N03",
+    "old": "a density ratio \\(P_1(X)/P_0(X)\\)",
+    "new": "the Radon–Nikodym density ratio \\(dP_1/dP_0(X)\\), assuming \\(P_1\\ll P_0\\)"
+  },
+  {
+    "issue": "M11",
+    "old": "**Evaluation of many candidates.** Multiple-policy inference and selection-adjusted guarantees matter when a dashboard searches over many rules. A 95% interval for a prespecified policy does not automatically cover the winner chosen after inspecting dozens of estimates. [Dann et al., AISTATS 2023](https://proceedings.mlr.press/v206/dann23a.html).",
+    "new": "**Evaluation of many candidates.** A 95% interval for a prespecified policy does not automatically cover the winner chosen after inspecting many estimates. Use independent final evaluation or a justified simultaneous procedure. Dann et al. study sample-efficient evaluation of multiple RL policies using shared on-policy Monte Carlo samples; this is related context, not a theorem validating post-selection intervals for our logged-data dashboard. [Dann et al., AISTATS 2023](https://proceedings.mlr.press/v206/dann23a.html)."
+  },
+  {
+    "issue": "L01",
+    "old": "For your project, predeclare a primary estimator and display alternatives as diagnostics.",
+    "new": "Estimator selection also predates PAS-IF: Su, Srinath, and Krishnamurthy develop adaptive estimator selection in ICML 2020. [Primary paper](https://proceedings.mlr.press/v119/su20d.html). For your project, predeclare a primary estimator and display alternatives as diagnostics."
+  },
+  {
+    "issue": "S02",
+    "old": "The local checks verified the illustrative arithmetic, original-generator integration, and displayed binary sensitivity endpoints. They did not run the supplied pipeline, download OBD, fit models, or establish empirical performance for a completed hackathon implementation.",
+    "new": "The original preparation checked illustrative arithmetic. The 30 October audit additionally executed the separate verification suite, including a cross-fitted tabular outcome estimator, repeated synthetic experiments, and independent numerical sensitivity checks; see Appendix B and the companion reports for exact scope. It did not execute the supplied invalid pipeline, download OBD, implement a production workbench, or establish a novel policy-revision algorithm. The literature audit is claim-focused, not an independent proof of every cited theorem."
+  }
+]

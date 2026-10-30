@@ -1,0 +1,65 @@
+"""Apply traceable edits to an immutable snapshot; never overwrite original."""
+from pathlib import Path
+import re,json,hashlib,difflib
+ROOT=Path(__file__).resolve().parents[1]
+src=ROOT/'original_snapshot.md'
+s=src.read_text(encoding='utf-8')
+changes=[]
+def replace(issue,old,new):
+    global s
+    if s.count(old)!=1: raise AssertionError((issue,s.count(old),old[:60]))
+    s=s.replace(old,new)
+    changes.append({'issue':issue,'old':old,'new':new})
+
+replace('E01','problem-focuse56d','problem-focused')
+replace('S01','**Research cutoff: 28 October 2026**','**Research cutoff: 28 October 2026; mathematical audit and revision: 30 October 2026**')
+replace('S01','No Open Bandit experiment was run for this dossier.','No Open Bandit experiment was run for this dossier. This revision adds independently derived conditions and an executed synthetic verification supplement. The original file remains unchanged. This is a research dossier and project specification, not a completed novel-algorithm manuscript. See Appendix A for the mathematical specification and Appendix B for measured audit results.')
+replace('N01','split rows into K folds, fit nuisance models on K−1 folds','split rows into F folds, fit nuisance models on F−1 folds')
+replace('N01',r'Write \(w_i=\pi(A_i\mid X_i)/p_i\), and \(\hat q_i^\pi=\sum_a\pi(a\mid X_i)\hat q(X_i,a)\).',r'Write \(w_i=\pi(A_i\mid X_i)/p_i\), \(\hat q_i=\hat q(X_i,A_i)\), and \(\hat q_i^\pi=\sum_a\pi(a\mid X_i)\hat q(X_i,a)\). Here n is the number of observations, K the number of actions, and F the number of cross-fitting folds. For held-out scores, each row uses the nuisance model fitted without its fold. Appendix A gives domains and explicit conditions.')
+replace('M01','Simple formulas below assume independent observations and a fixed environment.','Unless explicitly stated otherwise, the sample-mean variance and Wald formulas below assume IID observations from a fixed population and logger, a target policy fixed independently of evaluation outcomes, and the moment conditions in Appendix A. Independence alone does not supply identical-distribution or finite-variance conditions.')
+replace('M02','Predictive calibration under the logging distribution is necessary evidence, not proof of counterfactual calibration.','Held-out predictive calibration is useful diagnostic evidence, not a necessary condition for unbiased IPS or DR with exact propensities, and not proof of counterfactual calibration.')
+replace('M03',r'If \(\tilde\mu\) and \(\tilde q\) are their probability and reward limits, the bias term is',r'For any fixed measurable nuisance functions \(\tilde\mu,\tilde q\), with positive fitted propensities on target support and sufficient integrability, the conditional bias is exactly the following expression. Interpreting these functions as probability limits additionally requires convergence and uniform-integrability conditions; the algebra alone does not justify exchanging limits and expectations. The bias is')
+replace('M04','This is an approximation with finite-moment, nuisance-rate, and sampling assumptions.',r'Here \(s_Z^2=(n-1)^{-1}\sum_i(Z_i-\bar Z)^2\), with n at least 2. This is an approximation with finite-moment, nuisance-rate, and sampling assumptions. For estimated nuisances, double robustness of consistency alone does not justify this standard error. Appendix A states one sufficient regime and a counterexample to inference from consistency alone.')
+replace('M05','This limits variance but introduces bias.','For nonnegative rewards and a fixed nonnegative cap, this can reduce variance at the expense of bias; a data-selected cap needs separate analysis. For signed rewards, a general variance-reduction or bias-sign claim is not implied.')
+replace('N02',r'\(\tilde w=\lambda w/(w^2+\lambda)\)',r'\(\tilde w=\lambda w/(w^2+\lambda)\) for finite \(w\ge0\) and \(\lambda>0\), with \(\tilde w=0\) defined explicitly when \(\lambda=0\)')
+replace('M06','Use **a controlled synthetic benchmark as the primary proof of correctness**','Use **a controlled synthetic benchmark as the primary empirical verification**')
+replace('M07','These endpoints were calculated from the displayed formulas.','These endpoints were calculated from the displayed formulas and independently checked against two-variable linear-program vertex enumeration in the audit. The derivation requires 0<e<1, 0<=m<=1, and finite Gamma>=1. Appendix A supplies a feasibility construction and handles m=0 and m=1 without conditioning on null-probability cells.')
+replace('M07','This is an elementary derivation for the restricted binary, single-potential-outcome setting from the odds and normalization constraints.','This is an elementary derivation for the restricted binary, single-potential-outcome setting from the odds and normalization constraints. It assumes consistency and exchangeability conditional on a sufficient latent U, nominal e=P(A=1|X), and the marginal odds restriction. It does not impose the original known randomized assignment mechanism as an additional fixed constraint: the sensitivity exercise allows alternative hidden-assignment mechanisms consistent with the observed law.')
+replace('M08','For finite data, plug-in values of e, m, and stratum frequencies are **estimated bound endpoints**, not automatically confidence limits.','For finite data, plug-in values of e, m, and stratum frequencies are **estimated bound endpoints**, not automatically confidence limits. If a stratum has no treated observations, m is undefined; if its empirical e is 0 or 1, these formulas must not be used by adding an arbitrary epsilon. An empirically empty cell is not proof of structural zero support. Report insufficient information or use a separately justified observation model.')
+replace('M08','For continuous covariates and outcomes, naive independent weight boxes ignore compatibility constraints.','For continuous covariates and outcomes, naive independent weight boxes ignore compatibility constraints. Dorn and Guo\'s identification results include discrete outcomes, but the cited paper\'s particular quantile-regression confidence-interval theorems assume continuous outcome densities. They cannot be imported unchanged to this binary-reward implementation.')
+replace('M09','Generate a measured X and latent U. Let:','Generate a measured X and latent U from a specified joint distribution; generate action and potential-reward randomization independently conditional on (X,U). Without this independence, merely specifying the two conditional marginals below does not ensure exchangeability. The equations describe a family of generators, not a fully specified reproducible experiment. One possible form is:')
+replace('M10','Report n, ESS, ESS/n, number of clicks,','The ESS expression requires finite nonnegative weights with a positive sum. It is undefined for an empty sample or all-zero weights; the sample-mean variance also requires n>=2. These diagnostics do not certify action support away from observed rows. Report n, ESS, ESS/n, number of clicks,')
+replace('N03',r'a density ratio \(P_1(X)/P_0(X)\)',r'the Radon–Nikodym density ratio \(dP_1/dP_0(X)\), assuming \(P_1\ll P_0\)')
+replace('M11','**Evaluation of many candidates.** Multiple-policy inference and selection-adjusted guarantees matter when a dashboard searches over many rules. A 95% interval for a prespecified policy does not automatically cover the winner chosen after inspecting dozens of estimates. [Dann et al., AISTATS 2023](https://proceedings.mlr.press/v206/dann23a.html).','**Evaluation of many candidates.** A 95% interval for a prespecified policy does not automatically cover the winner chosen after inspecting many estimates. Use independent final evaluation or a justified simultaneous procedure. Dann et al. study sample-efficient evaluation of multiple RL policies using shared on-policy Monte Carlo samples; this is related context, not a theorem validating post-selection intervals for our logged-data dashboard. [Dann et al., AISTATS 2023](https://proceedings.mlr.press/v206/dann23a.html).')
+replace('L01','For your project, predeclare a primary estimator and display alternatives as diagnostics.','Estimator selection also predates PAS-IF: Su, Srinath, and Krishnamurthy develop adaptive estimator selection in ICML 2020. [Primary paper](https://proceedings.mlr.press/v119/su20d.html). For your project, predeclare a primary estimator and display alternatives as diagnostics.')
+replace('S02','The local checks verified the illustrative arithmetic, original-generator integration, and displayed binary sensitivity endpoints. They did not run the supplied pipeline, download OBD, fit models, or establish empirical performance for a completed hackathon implementation.','The original preparation checked illustrative arithmetic. The 30 October audit additionally executed the separate verification suite, including a cross-fitted tabular outcome estimator, repeated synthetic experiments, and independent numerical sensitivity checks; see Appendix B and the companion reports for exact scope. It did not execute the supplied invalid pipeline, download OBD, implement a production workbench, or establish a novel policy-revision algorithm. The literature audit is claim-focused, not an independent proof of every cited theorem.')
+
+# Preserve all original equations, adding stable audit identifiers in appearance order.
+counter=[0]
+def label(m):
+    counter[0]+=1
+    return m.group(0)+f'\n\n*Equation M{counter[0]:02d}.*'
+s=re.sub(r'\\\[.*?\\\]',label,s,flags=re.S)
+assert counter[0]==28
+s+='\n\n'+(ROOT/'mathematical_appendix.md').read_text(encoding='utf-8')
+data=json.loads((ROOT/'results'/'verification_results.json').read_text())
+s+='\n\n## Appendix B. Executed verification results (30 October 2026)\n\n'
+s+=f"The audit ran {data['tests_run']} automated tests with {data['failures']} failures and {data['errors']} errors, plus 1,000 independent datasets in each of four primary scenarios (n=2,000). Five-fold cross-fitting uses smoothed cell means with a prior mean 0.5 and prior count 1. An additional 1,000 independently seeded batches test four fixed-nuisance regimes and hidden confounding. These small tabular simulations are an audit supplement, not a benchmark of a finished product.\n\n"
+s+='| Scenario | Estimator | RMSE | Coverage among defined intervals | MC SE of coverage | Undefined / 1,000 | Mean interval width |\n|---|---|---:|---:|---:|---:|---:|\n'
+for r in data['monte_carlo']:
+    s+=f"| {r['scenario']} | {r['method']} | {r['rmse']:.6f} | {100*r['coverage_among_defined']:.2f}% | {100*r['coverage_mcse']:.2f} pp | {r['undefined']} | {r['mean_width']:.6f} |\n"
+s+='\nIntervals use 1.96 normal critical values. Coverage is empirical, not guaranteed; for SNIPS, undefined results are reported rather than dropped silently. Unconditional successful-coverage rates appear in the JSON. The oracle DR uses the true reward model and is an evaluator-only diagnostic, not an available real-world competitor. Weak-overlap performance at true reward 0.5 is affected by the fitted model\'s 0.5 prior; the off-prior scenario deliberately sets the truth to 0.7. Thus apparent high coverage in one weak-overlap scenario is not evidence of general reliability.\n\n'
+s+='| Fixed nuisance regime | Mean DR estimate | Monte Carlo SE | Algebraic limit | True value |\n|---|---:|---:|---:|---:|\n'
+for name,r in data['nuisance_experiments'].items():
+    if name=='hidden_confounding': continue
+    s+=f"| {name} | {r['mean']:.6f} | {r['mcse']:.6f} | {r['population_limit']:.2f} | {r['true_value']:.2f} |\n"
+h=data['nuisance_experiments']['hidden_confounding']
+s+=f"\nIn the hidden-U experiment, mean nominal IPS was {h['nominal_ips_mean']:.6f} (population limit 0.82), whereas full-propensity IPS averaged {h['full_propensity_ips_mean']:.6f} (truth 0.5). This supports the distinction in Section 3.3; it does not establish robustness to arbitrary unmeasured confounding.\n\n"
+s+='Reproduction: `python -X utf8 verification/verify.py` from the companion audit directory. See `results/verification_results.json`, `results/monte_carlo_raw.csv`, and `results/test_log.txt`. General symbolic CAS checks, OBD replication, sensitivity-endpoint confidence guarantees, adaptive/cluster inference, and policy-revision experiments remain unexecuted. Exact rational checks and written derivations replace CAS for the small identities audited here.\n'
+dst=ROOT/'Problem_3_Off_Policy_Evaluation_Revised.md'
+dst.write_text(s,encoding='utf-8')
+(ROOT/'changes.json').write_text(json.dumps(changes,ensure_ascii=False,indent=2),encoding='utf-8')
+(ROOT/'manuscript.diff').write_text(''.join(difflib.unified_diff(src.read_text(encoding='utf-8').splitlines(True),s.splitlines(True),fromfile='original_snapshot.md',tofile=dst.name)),encoding='utf-8')
+original=ROOT.parent/'Problem_3_Off_Policy_Evaluation_Research.md'
+assert hashlib.sha256(original.read_bytes()).hexdigest()==json.loads((ROOT/'initial_manifest.json').read_text())['original_sha256']
+print(f'Revised {len(changes)} passages; labeled {counter[0]} original display equations; original hash unchanged.')

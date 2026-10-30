@@ -1,0 +1,11 @@
+{
+  "original_unchanged": true,
+  "original_sha256": "936cee836e189d32480043c85dc26c7fb0405bba2f5d8655c3306bfde85355ec",
+  "recorded_source_hashes_match": true,
+  "frozen_protocol_hash_matches": true,
+  "candidate_score_arithmetic": "passed",
+  "markdown_links_and_structure": "passed",
+  "raw_method_trial_rows": 216000,
+  "summary_rows_verified": 216,
+  "tests_passed": 17
+}

@@ -1,0 +1,11 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "protocol_sha256": "fe5051a5e546106854c98c9b959657af614f838fc389a7b9ec5c644a763a7078",
+  "source_sha256": {
+    "experiment.py": "24d7acd3b7474a6c8d9ad8ccaf16608d813c63f11a5aace4905e54ce62504d8f",
+    "likelihood.py": "1407bfa8e4e26f34584ac6441dc989eead6ca1c97d85a252f30e3a5539667287",
+    "test_likelihood.py": "e909daf5ea411f8943c3155b533d5cf25668d3b54d10e68d90ef45e1e49520ed"
+  },
+  "tests_passed": 13
+}

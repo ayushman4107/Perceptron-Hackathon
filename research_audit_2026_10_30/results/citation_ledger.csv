@@ -1,0 +1,62 @@
+original_url,audit_status,verification_scope
+https://arxiv.org/abs/1003.5956,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://arxiv.org/abs/1103.4601,rechecked: primary landing page/abstract or repository,Bibliographic existence and claim relevance; no full external implementation replication
+https://arxiv.org/abs/1503.02834,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://arxiv.org/abs/1606.06126,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://arxiv.org/abs/1608.00060,rechecked: primary landing page/abstract or repository,Bibliographic existence and claim relevance; no full external implementation replication
+https://arxiv.org/abs/1703.06180,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://arxiv.org/abs/1710.11214,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://arxiv.org/abs/1805.08593,rechecked: primary landing page/abstract or repository,Bibliographic existence and claim relevance; no full external implementation replication
+https://arxiv.org/abs/1906.04733,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://arxiv.org/abs/2008.07146,rechecked: relevant full-text sections,Same underlying paper checked through arXiv HTML; not an independent proof of every theorem
+https://arxiv.org/abs/2102.04543,rechecked: relevant full-text sections,Same underlying paper checked through arXiv HTML; not an independent proof of every theorem
+https://arxiv.org/abs/2104.08977,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://arxiv.org/abs/2110.15332,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://arxiv.org/abs/2112.11449,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://arxiv.org/abs/2210.10768,rechecked: primary landing page/abstract or repository,Bibliographic existence and claim relevance; no full external implementation replication
+https://arxiv.org/abs/2211.13904,rechecked: primary landing page/abstract or repository,Bibliographic existence and claim relevance; no full external implementation replication
+https://arxiv.org/abs/2212.06355,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://arxiv.org/abs/2305.03954,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://arxiv.org/abs/2305.08062,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://arxiv.org/abs/2308.03443,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://arxiv.org/abs/2311.18207,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://arxiv.org/abs/2402.02171,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://arxiv.org/abs/2404.00099,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://arxiv.org/abs/2505.00961,rechecked: primary landing page/abstract or repository,Bibliographic existence and claim relevance; no full external implementation replication
+https://arxiv.org/abs/2507.16236,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://arxiv.org/abs/2606.22639,rechecked: primary landing page/abstract or repository,Bibliographic existence and claim relevance; no full external implementation replication
+https://arxiv.org/abs/2607.22012,rechecked: primary landing page/abstract or repository,Bibliographic existence and claim relevance; no full external implementation replication
+https://arxiv.org/abs/2609.19135,rechecked: primary landing page/abstract or repository,Bibliographic existence and claim relevance; no full external implementation replication
+https://arxiv.org/abs/2610.10974,rechecked: primary landing page/abstract or repository,Bibliographic existence and claim relevance; no full external implementation replication
+https://arxiv.org/html/2008.07146v5,rechecked: relevant full-text sections,Same underlying paper checked through arXiv HTML; not an independent proof of every theorem
+https://arxiv.org/html/2102.04543v3,rechecked: relevant full-text sections,Same underlying paper checked through arXiv HTML; not an independent proof of every theorem
+https://assets.amazon.science/c4/f9/66932e364785bdf271d0fb867408/scipub-approval152129-37504163-offpolicy-evaluation-of-candidate-generators-in-twostage-recommender-systems.pdf,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://dash.harvard.edu/entities/publication/73120378-82c0-6bd4-e053-0100007fdf3b,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://github.com/hakuhodo-technologies/scope-rl,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://github.com/st-tech/zr-obp,rechecked: primary landing page/abstract or repository,Bibliographic existence and claim relevance; no full external implementation replication
+https://huggingface.co/datasets/zozonext/open-bandit/blob/main/README.md,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://jmlr.org/beta/papers/v21/19-827.html,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://jmlr.org/papers/v14/bottou13a.html,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://ojs.aaai.org/index.php/AAAI/article/view/9541,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://papers.nips.cc/paper/2015/hash/39027dfad5138c9ca0c474d71db915c3-Abstract.html,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://papers.nips.cc/paper/2020/hash/fd4f21f2556dad0ea8b7a5c04eabebda-Abstract.html,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://proceedings.mlr.press/v119/su20a.html,rechecked: primary landing page/abstract or repository,Bibliographic existence and claim relevance; no full external implementation replication
+https://proceedings.mlr.press/v130/kuzborskij21a/kuzborskij21a.pdf,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://proceedings.mlr.press/v139/kallus21a/kallus21a.pdf,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://proceedings.mlr.press/v139/karampatziakis21a/karampatziakis21a.pdf,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://proceedings.mlr.press/v162/kallus22a,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://proceedings.mlr.press/v162/saito22a.html,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://proceedings.mlr.press/v206/dann23a.html,rechecked: primary landing page/abstract or repository,Bibliographic existence and claim relevance; no full external implementation replication
+https://proceedings.mlr.press/v206/ishikawa23a.html,rechecked: primary landing page/abstract or repository,Bibliographic existence and claim relevance; no full external implementation replication
+https://proceedings.mlr.press/v291/ryu25a.html,rechecked: primary landing page/abstract or repository,Bibliographic existence and claim relevance; no full external implementation replication
+https://proceedings.mlr.press/v37/swaminathan15.html,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://proceedings.mlr.press/v48/jiang16.html,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://proceedings.mlr.press/v48/schnabel16.html,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://proceedings.mlr.press/v70/wang17a.html,rechecked: primary landing page/abstract or repository,Bibliographic existence and claim relevance; no full external implementation replication
+https://proceedings.mlr.press/v80/farajtabar18a,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://proceedings.mlr.press/v84/kallus18a.html,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://proceedings.mlr.press/v97/bibaut19a.html,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://proceedings.neurips.cc/paper/2020/hash/6d34d468ac8876333c4d7173b85efed9-Abstract.html,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://research.zozo.com/data.html,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://www.stat.cmu.edu/~brian/905-2008/papers/Horvitz-Thompson-1952-jasa.pdf,not independently rechecked in this audit,Retained from original research; not counted as newly verified
+https://www.tandfonline.com/doi/abs/10.1080/01621459.1994.10476818,not independently rechecked in this audit,Retained from original research; not counted as newly verified

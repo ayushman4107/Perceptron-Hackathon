@@ -1,0 +1,11 @@
+{
+  "original_unchanged": true,
+  "original_sha256": "936cee836e189d32480043c85dc26c7fb0405bba2f5d8655c3306bfde85355ec",
+  "required_artifacts_present": true,
+  "markdown_structure_checks": "passed",
+  "original_display_equations": 28,
+  "original_source_urls_in_ledger": 61,
+  "verification_script_hash_matches": true,
+  "tests_passed": 29,
+  "scenario_method_rows": 20
+}
