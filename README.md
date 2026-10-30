@@ -1,4 +1,4 @@
-# PolicyLens — Counterfactual Policy Evaluation
+# PoliSee — Counterfactual Policy Evaluation
 
 Team research for IIT Bombay Techfest, **Problem 3: Did the Policy Actually Work, or Did It Just Look Like It Did?** Updated 30 October 2026.
 

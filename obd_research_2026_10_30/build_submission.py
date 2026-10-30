@@ -21,7 +21,7 @@ pdfmetrics.registerFont(TTFont('DV',str(FONT/'DejaVuSans.ttf')))
 pdfmetrics.registerFont(TTFont('DVB',str(FONT/'DejaVuSans-Bold.ttf')))
 pdfmetrics.registerFontFamily('DV',normal='DV',bold='DVB',italic='DV',boldItalic='DVB')
 INK=HexColor('#1f2b3b');TEAL=INK;MUTED=INK;LINE=HexColor('#dce3e8')
-PROJECT='PolicyLens';SUBTITLE='Counterfactual Policy Evaluation'
+PROJECT='PoliSee';SUBTITLE='Counterfactual Policy Evaluation'
 REPO_URL='https://github.com/ayushman4107/Perceptron-Hackathon'
 BODY_SIZE=10.2;HEADING_SIZE=17;CAPTION_SIZE=9;CAPTION_LEADING=11.5
 W,H=595.276,841.89
@@ -34,7 +34,7 @@ def para(c,text,x,y,w,size=9.5,leading=12.5,color=INK,bold=False):
     _,h=p.wrap(w,1000);p.drawOn(c,x,y-h);return y-h
 def footer(c,page):
     c.setStrokeColor(LINE);c.line(42,37,W-42,37);c.setFont('DV',CAPTION_SIZE);c.setFillColor(INK)
-    c.drawString(42,23,'PolicyLens | Perceptron | Problem 3')
+    c.drawString(42,23,'PoliSee | Perceptron | Problem 3')
     c.drawRightString(W-42,24,str(page))
 
 def abstract_page(c,text):
@@ -57,7 +57,7 @@ def abstract_page(c,text):
     for kind,s in chunks:
         if kind=='head' and s=='Novelty and differentiation':
             footer(c,1);c.showPage();page=2
-            para(c,'PolicyLens | Evaluation and delivery',42,805,W-84,HEADING_SIZE,21,bold=True)
+            para(c,'PoliSee | Evaluation and delivery',42,805,W-84,HEADING_SIZE,21,bold=True)
             y=771
         y=para(c,s,42,y,W-84,size,13.3,INK,kind=='head')
         y-=5 if kind=='head' else 8
@@ -77,7 +77,7 @@ def arrow(c,x1,y1,x2,y2):
     else:c.line(x2,y2,x2-4,y2-3);c.line(x2,y2,x2-4,y2+3)
 
 def evidence_page(c):
-    para(c,'PolicyLens | Approach and evidence',42,805,W-84,HEADING_SIZE,21,bold=True)
+    para(c,'PoliSee | Approach and evidence',42,805,W-84,HEADING_SIZE,21,bold=True)
     para(c,'Optional supplement | Frozen primary split; full campaign files',42,778,W-84,CAPTION_SIZE,CAPTION_LEADING)
     # Explicitly independent data branches, rather than an apparent sequential reference fit.
     c.setFillColor(HexColor('#edf5f3'));c.roundRect(188,733,219,25,5,stroke=0,fill=1)

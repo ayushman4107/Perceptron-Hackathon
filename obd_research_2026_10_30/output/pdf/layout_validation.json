@@ -5,12 +5,12 @@
   "body_font_size": 10.2,
   "evidence_bottom": 52.04511222132473,
   "page_text_characters": [
-    3519,
-    2724,
-    1158
+    3513,
+    2718,
+    1152
   ],
-  "pdf_bytes": 274391,
+  "pdf_bytes": 274382,
   "github_link_verified": true,
-  "prose_preserved": true,
+  "project_name": "PoliSee",
   "visual_inspection": "All three rendered pages reviewed; no overlaps or clipping."
 }

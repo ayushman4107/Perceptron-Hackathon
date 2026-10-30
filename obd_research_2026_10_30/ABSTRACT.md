@@ -1,4 +1,4 @@
-# PolicyLens: Counterfactual Policy Evaluation
+# PoliSee: Counterfactual Policy Evaluation
 
 [Code and reproducible results on GitHub](https://github.com/ayushman4107/Perceptron-Hackathon)
 
