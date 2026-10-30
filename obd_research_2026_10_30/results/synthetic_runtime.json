@@ -1,0 +1,133 @@
+{
+  "total_seconds": 136.3522913455963,
+  "cases": [
+    {
+      "case": 2,
+      "actions": 20,
+      "n_total": 10000,
+      "design": "rare",
+      "seconds": 27.6958224773407,
+      "rows": 5500
+    },
+    {
+      "case": 0,
+      "actions": 20,
+      "n_total": 10000,
+      "design": "null",
+      "seconds": 29.673295736312866,
+      "rows": 5500
+    },
+    {
+      "case": 3,
+      "actions": 20,
+      "n_total": 10000,
+      "design": "signal",
+      "seconds": 30.175647020339966,
+      "rows": 5500
+    },
+    {
+      "case": 1,
+      "actions": 20,
+      "n_total": 10000,
+      "design": "heterogeneous",
+      "seconds": 30.66674304008484,
+      "rows": 5500
+    },
+    {
+      "case": 4,
+      "actions": 20,
+      "n_total": 50000,
+      "design": "null",
+      "seconds": 32.70722579956055,
+      "rows": 5500
+    },
+    {
+      "case": 5,
+      "actions": 20,
+      "n_total": 50000,
+      "design": "heterogeneous",
+      "seconds": 31.44348931312561,
+      "rows": 5500
+    },
+    {
+      "case": 7,
+      "actions": 20,
+      "n_total": 50000,
+      "design": "signal",
+      "seconds": 30.4870126247406,
+      "rows": 5500
+    },
+    {
+      "case": 6,
+      "actions": 20,
+      "n_total": 50000,
+      "design": "rare",
+      "seconds": 32.25673699378967,
+      "rows": 5500
+    },
+    {
+      "case": 8,
+      "actions": 80,
+      "n_total": 10000,
+      "design": "null",
+      "seconds": 31.928069829940796,
+      "rows": 5500
+    },
+    {
+      "case": 10,
+      "actions": 80,
+      "n_total": 10000,
+      "design": "rare",
+      "seconds": 31.936603546142578,
+      "rows": 5500
+    },
+    {
+      "case": 9,
+      "actions": 80,
+      "n_total": 10000,
+      "design": "heterogeneous",
+      "seconds": 33.6671347618103,
+      "rows": 5500
+    },
+    {
+      "case": 11,
+      "actions": 80,
+      "n_total": 10000,
+      "design": "signal",
+      "seconds": 32.997065782547,
+      "rows": 5500
+    },
+    {
+      "case": 12,
+      "actions": 80,
+      "n_total": 50000,
+      "design": "null",
+      "seconds": 40.42318630218506,
+      "rows": 5500
+    },
+    {
+      "case": 14,
+      "actions": 80,
+      "n_total": 50000,
+      "design": "rare",
+      "seconds": 38.33029127120972,
+      "rows": 5500
+    },
+    {
+      "case": 13,
+      "actions": 80,
+      "n_total": 50000,
+      "design": "heterogeneous",
+      "seconds": 40.616673946380615,
+      "rows": 5500
+    },
+    {
+      "case": 15,
+      "actions": 80,
+      "n_total": 50000,
+      "design": "signal",
+      "seconds": 39.48476839065552,
+      "rows": 5500
+    }
+  ]
+}

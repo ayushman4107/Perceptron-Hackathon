@@ -1,0 +1,43 @@
+{
+  "seed": 43107,
+  "n_before": 100000,
+  "n_after": 100000,
+  "q": [
+    [
+      0.2,
+      0.1
+    ],
+    [
+      0.8,
+      0.7
+    ]
+  ],
+  "old_population": [
+    0.8,
+    0.2
+  ],
+  "new_population": [
+    0.2,
+    0.8
+  ],
+  "old_policy": [
+    0.8,
+    0.2
+  ],
+  "new_policy": [
+    0.2,
+    0.8
+  ],
+  "observed_before": 0.29797,
+  "observed_after": 0.60145,
+  "naive_change": 0.30348,
+  "ips_policy_effect": -0.06138750000000004,
+  "ips_wald95": [
+    -0.06894718424059208,
+    -0.053827815759407996
+  ],
+  "true_effect_same_new_population": -0.06000000000000011,
+  "expected_before": 0.3000000000000001,
+  "expected_after": 0.6000000000000001,
+  "minimum_logged_propensity": 0.2
+}

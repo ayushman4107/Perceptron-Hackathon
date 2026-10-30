@@ -1,1 +1,1 @@
-numpy==2.3.5
+-r obd_research_2026_10_30/requirements.txt

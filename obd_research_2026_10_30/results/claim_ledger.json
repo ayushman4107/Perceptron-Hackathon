@@ -1,0 +1,404 @@
+{
+  "real_rows_processed": 6769588,
+  "primary_split_counts": [
+    91674,
+    183450,
+    182881
+  ],
+  "primary_k": 20,
+  "primary_exact_interval": [
+    0.0005276548845836904,
+    0.002515446476216702
+  ],
+  "primary_reference": 0.0021840750598111987,
+  "primary_reference_wald95": [
+    0.0016183531048070228,
+    0.0027497970148153746
+  ],
+  "primary_reference_block95": [
+    0.0014444603992985598,
+    0.0029767658720477787
+  ],
+  "primary_width_reduction_vs_original": 0.8259099787567679,
+  "primary_width_reduction_vs_item_kl": 0.7897336133880957,
+  "primary_predictive_width_reduction_vs_original": 0.7355378824596015,
+  "bts_naive_relative_error": 0.3467037210943884,
+  "bts_dr_relative_error": 0.01888146685910086,
+  "bts_ips_relative_error": 0.030238882549027624,
+  "tests_passed": 16,
+  "synthetic_logs": 8000,
+  "method_trial_rows": 88000,
+  "aggregate_fixed_benchmark": {
+    "dr_wald": {
+      "covered": 0.75925,
+      "false_improvement": 0.002,
+      "beneficial": 0.24725,
+      "selected_gain": 0.0015712512908061217,
+      "median_width": 0.007060571418314765
+    },
+    "group_exact": {
+      "covered": 0.998875,
+      "false_improvement": 0.000125,
+      "beneficial": 0.194125,
+      "selected_gain": 0.0015849576676659947,
+      "median_width": 0.012011347127060002
+    },
+    "group_jeffreys": {
+      "covered": 1.0,
+      "false_improvement": 0.0,
+      "beneficial": 0.133375,
+      "selected_gain": 0.0011006344298245567,
+      "median_width": 0.020111598641503105
+    },
+    "group_kl": {
+      "covered": 0.99975,
+      "false_improvement": 0.0,
+      "beneficial": 0.156125,
+      "selected_gain": 0.0013454749841772106,
+      "median_width": 0.013955459833160988
+    },
+    "group_predictive": {
+      "covered": 0.99975,
+      "false_improvement": 0.0,
+      "beneficial": 0.174125,
+      "selected_gain": 0.0014124969506440095,
+      "median_width": 0.018259943864125553
+    },
+    "group_split": {
+      "covered": 0.999375,
+      "false_improvement": 0.0,
+      "beneficial": 0.14,
+      "selected_gain": 0.0012445198323339955,
+      "median_width": 0.03513913130512523
+    },
+    "ips_wald": {
+      "covered": 0.710375,
+      "false_improvement": 0.00175,
+      "beneficial": 0.245625,
+      "selected_gain": 0.0015532419865922642,
+      "median_width": 0.006917107303810729
+    },
+    "item_jeffreys": {
+      "covered": 1.0,
+      "false_improvement": 0.0,
+      "beneficial": 0.00025,
+      "selected_gain": 1.8416666666666502e-06,
+      "median_width": 0.150866352173266
+    },
+    "item_kl": {
+      "covered": 1.0,
+      "false_improvement": 0.0,
+      "beneficial": 0.0115,
+      "selected_gain": 0.00013455,
+      "median_width": 0.06825184508902712
+    },
+    "item_predictive": {
+      "covered": 1.0,
+      "false_improvement": 0.0,
+      "beneficial": 0.0565,
+      "selected_gain": 0.0004306322368421019,
+      "median_width": 0.0634841134183511
+    },
+    "item_split": {
+      "covered": 1.0,
+      "false_improvement": 0.0,
+      "beneficial": 0.032125,
+      "selected_gain": 0.00024244912280701553,
+      "median_width": 0.1027119760238182
+    }
+  },
+  "selected_exact_witness": {
+    "group_means": [
+      0.003943127488409412,
+      0.003239587642297825
+    ],
+    "gain": 0.0005276548845836903,
+    "absolute_group_mean_drift_tolerance": 0.00035176992305579357,
+    "interpretation": "Group-level adverse means inside the simultaneous exact box, not a hidden-confounder estimate."
+  },
+  "synthetic_before_after": {
+    "seed": 43107,
+    "n_before": 100000,
+    "n_after": 100000,
+    "q": [
+      [
+        0.2,
+        0.1
+      ],
+      [
+        0.8,
+        0.7
+      ]
+    ],
+    "old_population": [
+      0.8,
+      0.2
+    ],
+    "new_population": [
+      0.2,
+      0.8
+    ],
+    "old_policy": [
+      0.8,
+      0.2
+    ],
+    "new_policy": [
+      0.2,
+      0.8
+    ],
+    "observed_before": 0.29797,
+    "observed_after": 0.60145,
+    "naive_change": 0.30348,
+    "ips_policy_effect": -0.06138750000000004,
+    "ips_wald95": [
+      -0.06894718424059208,
+      -0.053827815759407996
+    ],
+    "true_effect_same_new_population": -0.06000000000000011,
+    "expected_before": 0.3000000000000001,
+    "expected_after": 0.6000000000000001,
+    "minimum_logged_propensity": 0.2
+  },
+  "exploratory_repeated_splits": [
+    {
+      "campaign": "all",
+      "method": "group_exact",
+      "certified_fraction": 1.0,
+      "median_width_reduction": 0.8107041454129547,
+      "min_width_reduction": 0.7679527355811454,
+      "max_width_reduction": 0.8473686878928438
+    },
+    {
+      "campaign": "all",
+      "method": "group_jeffreys",
+      "certified_fraction": 0.92,
+      "median_width_reduction": 0.6775723850731883,
+      "min_width_reduction": 0.6030951849989367,
+      "max_width_reduction": 0.7413478681088546
+    },
+    {
+      "campaign": "all",
+      "method": "group_kl",
+      "certified_fraction": 1.0,
+      "median_width_reduction": 0.7707350855005626,
+      "min_width_reduction": 0.7187498537418101,
+      "max_width_reduction": 0.8151919244270929
+    },
+    {
+      "campaign": "all",
+      "method": "group_predictive",
+      "certified_fraction": 0.97,
+      "median_width_reduction": 0.7485686977421602,
+      "min_width_reduction": 0.6575329025007479,
+      "max_width_reduction": 0.8092968725930015
+    },
+    {
+      "campaign": "all",
+      "method": "group_split",
+      "certified_fraction": 0.75,
+      "median_width_reduction": 0.6999805976711958,
+      "min_width_reduction": 0.5137909422817242,
+      "max_width_reduction": 0.812090621112764
+    },
+    {
+      "campaign": "all",
+      "method": "ips_wald",
+      "certified_fraction": 1.0,
+      "median_width_reduction": 0.8529251851905213,
+      "min_width_reduction": 0.8157524535171826,
+      "max_width_reduction": 0.8835378019888278
+    },
+    {
+      "campaign": "all",
+      "method": "item_jeffreys",
+      "certified_fraction": 0.0,
+      "median_width_reduction": -0.8907501072928651,
+      "min_width_reduction": -1.3033294908790714,
+      "max_width_reduction": -0.529807807297028
+    },
+    {
+      "campaign": "all",
+      "method": "item_kl",
+      "certified_fraction": 0.0,
+      "median_width_reduction": 0.12799207851097355,
+      "min_width_reduction": -0.0795585626488522,
+      "max_width_reduction": 0.2885123972125989
+    },
+    {
+      "campaign": "all",
+      "method": "item_predictive",
+      "certified_fraction": 0.0,
+      "median_width_reduction": 0.17371750526361845,
+      "min_width_reduction": 0.0681889186318813,
+      "max_width_reduction": 0.278452392062
+    },
+    {
+      "campaign": "all",
+      "method": "item_split",
+      "certified_fraction": 0.0,
+      "median_width_reduction": 0.0,
+      "min_width_reduction": 0.0,
+      "max_width_reduction": 0.0
+    },
+    {
+      "campaign": "men",
+      "method": "group_exact",
+      "certified_fraction": 0.44,
+      "median_width_reduction": 0.6857508242056709,
+      "min_width_reduction": 0.5537217519159869,
+      "max_width_reduction": 0.7520174774825459
+    },
+    {
+      "campaign": "men",
+      "method": "group_jeffreys",
+      "certified_fraction": 0.01,
+      "median_width_reduction": 0.5149686336767055,
+      "min_width_reduction": 0.3037378106412086,
+      "max_width_reduction": 0.6219989848376677
+    },
+    {
+      "campaign": "men",
+      "method": "group_kl",
+      "certified_fraction": 0.08,
+      "median_width_reduction": 0.6199168675304907,
+      "min_width_reduction": 0.4591579988041205,
+      "max_width_reduction": 0.6998989452422396
+    },
+    {
+      "campaign": "men",
+      "method": "group_predictive",
+      "certified_fraction": 0.28,
+      "median_width_reduction": 0.6102932565835743,
+      "min_width_reduction": 0.5309137623598008,
+      "max_width_reduction": 0.6985117054519036
+    },
+    {
+      "campaign": "men",
+      "method": "group_split",
+      "certified_fraction": 0.23,
+      "median_width_reduction": 0.5320082817672678,
+      "min_width_reduction": 0.3093914696849669,
+      "max_width_reduction": 0.6755906647205535
+    },
+    {
+      "campaign": "men",
+      "method": "ips_wald",
+      "certified_fraction": 0.84,
+      "median_width_reduction": 0.7767643333648409,
+      "min_width_reduction": 0.6822962235326087,
+      "max_width_reduction": 0.8256477548580051
+    },
+    {
+      "campaign": "men",
+      "method": "item_jeffreys",
+      "certified_fraction": 0.0,
+      "median_width_reduction": -0.7466435974019794,
+      "min_width_reduction": -1.415524779950739,
+      "max_width_reduction": -0.3558716277561384
+    },
+    {
+      "campaign": "men",
+      "method": "item_kl",
+      "certified_fraction": 0.0,
+      "median_width_reduction": -0.31944420387467687,
+      "min_width_reduction": -0.7680498206875719,
+      "max_width_reduction": -0.0266980976368509
+    },
+    {
+      "campaign": "men",
+      "method": "item_predictive",
+      "certified_fraction": 0.0,
+      "median_width_reduction": 0.16104716883100317,
+      "min_width_reduction": -0.0139277524868015,
+      "max_width_reduction": 0.2975554967663592
+    },
+    {
+      "campaign": "men",
+      "method": "item_split",
+      "certified_fraction": 0.0,
+      "median_width_reduction": 0.0,
+      "min_width_reduction": 0.0,
+      "max_width_reduction": 0.0
+    },
+    {
+      "campaign": "women",
+      "method": "group_exact",
+      "certified_fraction": 0.9,
+      "median_width_reduction": 0.7305084424773598,
+      "min_width_reduction": 0.6497579439242414,
+      "max_width_reduction": 0.80648861349638
+    },
+    {
+      "campaign": "women",
+      "method": "group_jeffreys",
+      "certified_fraction": 0.25,
+      "median_width_reduction": 0.5707531416324321,
+      "min_width_reduction": 0.4386563186553005,
+      "max_width_reduction": 0.6915100519330737
+    },
+    {
+      "campaign": "women",
+      "method": "group_kl",
+      "certified_fraction": 0.65,
+      "median_width_reduction": 0.6729424352644737,
+      "min_width_reduction": 0.5750715717465429,
+      "max_width_reduction": 0.7653140394947012
+    },
+    {
+      "campaign": "women",
+      "method": "group_predictive",
+      "certified_fraction": 0.69,
+      "median_width_reduction": 0.6567007222964174,
+      "min_width_reduction": 0.5669258602027787,
+      "max_width_reduction": 0.7461569981564073
+    },
+    {
+      "campaign": "women",
+      "method": "group_split",
+      "certified_fraction": 0.42,
+      "median_width_reduction": 0.5860095641767749,
+      "min_width_reduction": 0.3900455908977348,
+      "max_width_reduction": 0.7560193742599539
+    },
+    {
+      "campaign": "women",
+      "method": "ips_wald",
+      "certified_fraction": 1.0,
+      "median_width_reduction": 0.804580137368788,
+      "min_width_reduction": 0.7497312242509071,
+      "max_width_reduction": 0.8583023545588044
+    },
+    {
+      "campaign": "women",
+      "method": "item_jeffreys",
+      "certified_fraction": 0.0,
+      "median_width_reduction": -0.7755318572935747,
+      "min_width_reduction": -1.3089532702487343,
+      "max_width_reduction": -0.2868058278321717
+    },
+    {
+      "campaign": "women",
+      "method": "item_kl",
+      "certified_fraction": 0.0,
+      "median_width_reduction": -0.1742236667876797,
+      "min_width_reduction": -0.5189178018417964,
+      "max_width_reduction": 0.1559938520019573
+    },
+    {
+      "campaign": "women",
+      "method": "item_predictive",
+      "certified_fraction": 0.0,
+      "median_width_reduction": 0.17538245427781995,
+      "min_width_reduction": 0.0363376420724288,
+      "max_width_reduction": 0.3315640963223963
+    },
+    {
+      "campaign": "women",
+      "method": "item_split",
+      "certified_fraction": 0.0,
+      "median_width_reduction": 0.0,
+      "min_width_reduction": 0.0,
+      "max_width_reduction": 0.0
+    }
+  ]
+}

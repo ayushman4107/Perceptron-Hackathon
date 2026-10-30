@@ -1,0 +1,84 @@
+{
+  "behavior": "bts",
+  "evaluation": "uniform random",
+  "campaign": "men",
+  "position": 1,
+  "n_behavior": 1358878,
+  "n_reference": 150936,
+  "observed_bts": {
+    "mean": 0.007244947670063096,
+    "wald95": [
+      0.007102352545527512,
+      0.00738754279459868
+    ]
+  },
+  "on_policy_random": {
+    "mean": 0.005379763608416813,
+    "wald95": [
+      0.00501072539954948,
+      0.005748801817284145
+    ]
+  },
+  "ips": {
+    "mean": 0.005542441648313262,
+    "wald95": [
+      0.00518147754587353,
+      0.005903405750752994
+    ]
+  },
+  "snips": 0.0054934068818470756,
+  "dr": {
+    "mean": 0.005481341436698932,
+    "wald95": [
+      0.005097941323686472,
+      0.005864741549711392
+    ]
+  },
+  "weight_max": 5882.35294117647,
+  "weight_ess": 6808.575331846282,
+  "nonzero_reward_weight_ess": 905.1015918073043,
+  "min_propensity": 5e-06,
+  "actions_observed": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "clipped_ips": {
+    "10": 0.004885823563455519,
+    "50": 0.005527082122157971,
+    "100": 0.005542441648313262,
+    "1000": 0.005542441648313262
+  },
+  "note": "On-policy reference is an independent empirical estimate; not exact truth. Supplied BTS propensities are Monte Carlo approximations. Wald intervals are asymptotic."
+}

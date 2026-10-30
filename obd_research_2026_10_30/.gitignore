@@ -1,0 +1,11 @@
+.deps/
+.venv/
+wheels/
+tmp/
+__pycache__/
+*.pyc
+data/*.member
+data/*.npz
+data/*.bin
+data/*.part
+*_metadata.json

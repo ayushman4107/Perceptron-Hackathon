@@ -1,0 +1,21 @@
+test_empty_groups_full_uncertainty (test_methods.Checks.test_empty_groups_full_uncertainty) ... ok
+test_heterogeneous_exact_compression (test_methods.Checks.test_heterogeneous_exact_compression) ... ok
+test_invalid_counts (test_methods.Checks.test_invalid_counts) ... ok
+test_invalid_grouping_rejected (test_methods.Checks.test_invalid_grouping_rejected) ... ok
+test_mixture_floor (test_methods.Checks.test_mixture_floor) ... ok
+test_one_cell_exact_endpoint (test_methods.Checks.test_one_cell_exact_endpoint) ... ok
+test_pilot_selected_groups_still_normalized (test_methods.Checks.test_pilot_selected_groups_still_normalized) ... ok
+test_predictive_distribution_normalized_and_evalue (test_methods.Checks.test_predictive_distribution_normalized_and_evalue) ... ok
+test_radius_monotonic (test_methods.Checks.test_radius_monotonic) ... ok
+test_reproducible_evaluate_and_folds (test_methods.Checks.test_reproducible_evaluate_and_folds) ... ok
+test_scipy_independent_solver (test_methods.Checks.test_scipy_independent_solver) ... ok
+test_scores_match_expanded_rows (test_methods.Checks.test_scores_match_expanded_rows) ... ok
+test_support_rejected (test_methods.Checks.test_support_rejected) ... ok
+test_topk_identity_and_probability (test_methods.Checks.test_topk_identity_and_probability) ... ok
+test_zero_clicks_not_zero_uncertainty (test_methods.Checks.test_zero_clicks_not_zero_uncertainty) ... ok
+test_zero_contrast (test_methods.Checks.test_zero_contrast) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.384s
+
+OK

@@ -1,0 +1,186 @@
+[
+  {
+    "name": "open_bandit_dataset/README",
+    "method": 8,
+    "crc32": 2071969416,
+    "compressed": 1283,
+    "uncompressed": 2659,
+    "offset": 0
+  },
+  {
+    "name": "open_bandit_dataset/bts/all/item_context.csv",
+    "method": 8,
+    "crc32": 2430790624,
+    "compressed": 1884,
+    "uncompressed": 10041,
+    "offset": 1352
+  },
+  {
+    "name": "open_bandit_dataset/bts/all/all.csv",
+    "method": 8,
+    "crc32": 1978923550,
+    "compressed": 203592547,
+    "uncompressed": 4294967295,
+    "offset": 3323
+  },
+  {
+    "name": "open_bandit_dataset/bts/all/",
+    "method": 0,
+    "crc32": 0,
+    "compressed": 0,
+    "uncompressed": 0,
+    "offset": 203595968
+  },
+  {
+    "name": "open_bandit_dataset/bts/men/item_context.csv",
+    "method": 8,
+    "crc32": 3615012237,
+    "compressed": 1067,
+    "uncompressed": 4287,
+    "offset": 203596039
+  },
+  {
+    "name": "open_bandit_dataset/bts/men/men.csv",
+    "method": 8,
+    "crc32": 90067629,
+    "compressed": 57454131,
+    "uncompressed": 1332891122,
+    "offset": 203597193
+  },
+  {
+    "name": "open_bandit_dataset/bts/men/",
+    "method": 0,
+    "crc32": 0,
+    "compressed": 0,
+    "uncompressed": 0,
+    "offset": 261051402
+  },
+  {
+    "name": "open_bandit_dataset/bts/women/item_context.csv",
+    "method": 8,
+    "crc32": 693725147,
+    "compressed": 1288,
+    "uncompressed": 5792,
+    "offset": 261051473
+  },
+  {
+    "name": "open_bandit_dataset/bts/women/women.csv",
+    "method": 8,
+    "crc32": 3772198802,
+    "compressed": 110919836,
+    "uncompressed": 2913666740,
+    "offset": 261052850
+  },
+  {
+    "name": "open_bandit_dataset/bts/women/",
+    "method": 0,
+    "crc32": 0,
+    "compressed": 0,
+    "uncompressed": 0,
+    "offset": 371972768
+  },
+  {
+    "name": "open_bandit_dataset/bts/",
+    "method": 0,
+    "crc32": 0,
+    "compressed": 0,
+    "uncompressed": 0,
+    "offset": 371972841
+  },
+  {
+    "name": "open_bandit_dataset/VERSION",
+    "method": 8,
+    "crc32": 3381578034,
+    "compressed": 36,
+    "uncompressed": 34,
+    "offset": 371972908
+  },
+  {
+    "name": "open_bandit_dataset/random/all/item_context.csv",
+    "method": 8,
+    "crc32": 4268298882,
+    "compressed": 1886,
+    "uncompressed": 10041,
+    "offset": 371973014
+  },
+  {
+    "name": "open_bandit_dataset/random/all/all.csv",
+    "method": 8,
+    "crc32": 2638050075,
+    "compressed": 22089763,
+    "uncompressed": 695501426,
+    "offset": 371974990
+  },
+  {
+    "name": "open_bandit_dataset/random/all/",
+    "method": 0,
+    "crc32": 0,
+    "compressed": 0,
+    "uncompressed": 0,
+    "offset": 394064834
+  },
+  {
+    "name": "open_bandit_dataset/random/men/item_context.csv",
+    "method": 8,
+    "crc32": 3881471782,
+    "compressed": 1070,
+    "uncompressed": 4287,
+    "offset": 394064908
+  },
+  {
+    "name": "open_bandit_dataset/random/men/men.csv",
+    "method": 8,
+    "crc32": 2126893868,
+    "compressed": 6446314,
+    "uncompressed": 151946449,
+    "offset": 394066068
+  },
+  {
+    "name": "open_bandit_dataset/random/men/",
+    "method": 0,
+    "crc32": 0,
+    "compressed": 0,
+    "uncompressed": 0,
+    "offset": 400512463
+  },
+  {
+    "name": "open_bandit_dataset/random/women/item_context.csv",
+    "method": 8,
+    "crc32": 3760240370,
+    "compressed": 1283,
+    "uncompressed": 5792,
+    "offset": 400512537
+  },
+  {
+    "name": "open_bandit_dataset/random/women/women.csv",
+    "method": 8,
+    "crc32": 3966712660,
+    "compressed": 12415545,
+    "uncompressed": 331703218,
+    "offset": 400513912
+  },
+  {
+    "name": "open_bandit_dataset/random/women/",
+    "method": 0,
+    "crc32": 0,
+    "compressed": 0,
+    "uncompressed": 0,
+    "offset": 412929542
+  },
+  {
+    "name": "open_bandit_dataset/random/",
+    "method": 0,
+    "crc32": 0,
+    "compressed": 0,
+    "uncompressed": 0,
+    "offset": 412929618
+  },
+  {
+    "name": "open_bandit_dataset/",
+    "method": 0,
+    "crc32": 0,
+    "compressed": 0,
+    "uncompressed": 0,
+    "offset": 412929688
+  }
+]

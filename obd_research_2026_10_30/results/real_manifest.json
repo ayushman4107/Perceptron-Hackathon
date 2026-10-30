@@ -1,0 +1,7 @@
+{
+  "protocol_sha256": "0f307e8c9c482546c05d07bd183a614789c1622d9886c22b14fbf82ef9c05179",
+  "source_sha256": {
+    "methods.py": "164d9ed6836d9ccba474d290000d52ef8fb7f21ebc2efd249c13b610aeffa895",
+    "real_experiment.py": "fa9f419a8e13a9600d8d082e661e1436fab1cdf71311c38ff3ec7759e3218b48"
+  }
+}
