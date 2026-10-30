@@ -1,5 +1,7 @@
 PolicyLens: Counterfactual Policy Evaluation
 
+Code and reproducible results on GitHub: https://github.com/ayushman4107/Perceptron-Hackathon
+
 Problem and theme
 
 We address Problem 3, “Did the Policy Actually Work, or Did It Just Look Like It Did?”, under Theme 2: Cause and Effect in AI Decisions. Our starting point is a measured discrepancy. In Open Bandit Dataset’s men’s campaign, the deployed Thompson Sampling policy records a 0.7245% click-through rate. Evaluating uniform recommendation from those logs gives 0.5481% with doubly robust estimation; the independent Random-policy reference is 0.5380%. Reusing the deployed policy’s average would answer the wrong question. We want to make that distinction visible before a team changes its decision system.

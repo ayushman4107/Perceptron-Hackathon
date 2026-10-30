@@ -22,6 +22,7 @@ pdfmetrics.registerFont(TTFont('DVB',str(FONT/'DejaVuSans-Bold.ttf')))
 pdfmetrics.registerFontFamily('DV',normal='DV',bold='DVB',italic='DV',boldItalic='DVB')
 INK=HexColor('#1f2b3b');TEAL=INK;MUTED=INK;LINE=HexColor('#dce3e8')
 PROJECT='PolicyLens';SUBTITLE='Counterfactual Policy Evaluation'
+REPO_URL='https://github.com/ayushman4107/Perceptron-Hackathon'
 BODY_SIZE=10.2;HEADING_SIZE=17;CAPTION_SIZE=9;CAPTION_LEADING=11.5
 W,H=595.276,841.89
 def clean(s):
@@ -40,7 +41,14 @@ def abstract_page(c,text):
     c.setFillColor(INK);c.setFont('DV',CAPTION_SIZE);c.drawString(42,806,'PERCEPTRON  /  PROBLEM 3  /  THEME 2')
     para(c,PROJECT,42,788,W-84,HEADING_SIZE,21,bold=True)
     para(c,SUBTITLE,42,761,W-84,BODY_SIZE,13.3)
-    c.setStrokeColor(TEAL);c.setLineWidth(1.3);c.line(42,731,W-42,731)
+    c.setFont('DV',CAPTION_SIZE);c.setFillColor(INK)
+    label='Code and results: ';url_label='github.com/ayushman4107/Perceptron-Hackathon'
+    c.drawString(42,738,label+url_label)
+    left=42+pdfmetrics.stringWidth(label,'DV',CAPTION_SIZE)
+    right=left+pdfmetrics.stringWidth(url_label,'DV',CAPTION_SIZE)
+    c.setStrokeColor(INK);c.setLineWidth(.4);c.line(left,736,right,736)
+    c.linkURL(REPO_URL,(left,735,right,748),relative=0)
+    c.setStrokeColor(TEAL);c.setLineWidth(1.3);c.line(42,725,W-42,725)
     chunks=[]
     for section in text.split('\n## ')[1:]:
         heading,body=section.split('\n',1);chunks.append(('head',heading.strip()))
@@ -52,7 +60,7 @@ def abstract_page(c,text):
             para(c,'PolicyLens | Evaluation and delivery',42,805,W-84,HEADING_SIZE,21,bold=True)
             y=771
         y=para(c,s,42,y,W-84,size,13.3,INK,kind=='head')
-        y-=7 if kind=='head' else 10
+        y-=5 if kind=='head' else 8
         if y<49:raise RuntimeError(f'Abstract page {page} overflow at {s[:40]}')
     y=chart(c,'02_policy_certificate.png',42,y-2,W-84)
     y=para(c,'Primary OBD split, selected top-20 candidate. Finite-sample methods account for the five-candidate family; DR/Wald is asymptotic. The shaded band describes uncertainty in the independent reference, not counterfactual ground truth.',42,y-6,W-84,CAPTION_SIZE,CAPTION_LEADING)
@@ -96,7 +104,9 @@ def main():
     pdf=OUT/'Abstract_with_Evidence.pdf';c=canvas.Canvas(str(pdf),pagesize=(W,H))
     c.setTitle(PROJECT+': '+SUBTITLE);c.setAuthor('Perceptron hackathon team')
     size=abstract_page(c,text);c.showPage();bottom=evidence_page(c);c.showPage();c.save()
-    plain=re.sub(r'^#+\s*','',text,flags=re.M).replace('**','');(ROOT/'ABSTRACT_plain.txt').write_text(plain,encoding='utf-8')
+    plain=re.sub(r'^#+\s*','',text,flags=re.M).replace('**','')
+    plain=re.sub(r'\[([^\]]+)\]\((https?://[^)]+)\)',r'\1: \2',plain)
+    (ROOT/'ABSTRACT_plain.txt').write_text(plain,encoding='utf-8')
     render=ROOT/'tmp'/'pdf_preview';render.mkdir(parents=True,exist_ok=True)
     doc=pymupdf.open(pdf);assert len(doc)==3
     for i,page in enumerate(doc):page.get_pixmap(matrix=pymupdf.Matrix(1.6,1.6)).save(render/f'page-{i+1}.png')
