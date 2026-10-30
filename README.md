@@ -12,7 +12,7 @@ Our project evaluates which policy changes logged data can support. The latest e
 4. [Revised research document](research_audit_2026_10_30/Problem_3_Off_Policy_Evaluation_Revised.md) — detailed foundations, methods, literature, assumptions, and limitations.
 5. [Earlier likelihood extension](likelihood_extension_2026_10_30/TECHNICAL_NOTE.md) and [its results](likelihood_extension_2026_10_30/RESULTS.md) — the preceding experiment, retained unchanged for provenance.
 
-The [current plain-text abstract](obd_research_2026_10_30/ABSTRACT_plain.txt) is available for submission forms. The [supplied challenge PDF](Perceptron_Hackathon_by_optive_PS.pdf) is included for reference. The older `abstract_submission_2026_10_31` draft is superseded; it is retained as historical material.
+The [current plain-text abstract](obd_research_2026_10_30/ABSTRACT_plain.txt) is available for submission forms. The older `abstract_submission_2026_10_31` draft is superseded; it is retained as historical material.
 
 ## Research status and evidence
 
