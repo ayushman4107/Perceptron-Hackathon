@@ -20,7 +20,7 @@ FONT=Path(matplotlib.get_data_path())/'fonts'/'ttf'
 pdfmetrics.registerFont(TTFont('DV',str(FONT/'DejaVuSans.ttf')))
 pdfmetrics.registerFont(TTFont('DVB',str(FONT/'DejaVuSans-Bold.ttf')))
 pdfmetrics.registerFontFamily('DV',normal='DV',bold='DVB',italic='DV',boldItalic='DVB')
-INK=HexColor('#1f2b3b');TEAL=INK;MUTED=INK;LINE=HexColor('#dce3e8')
+INK=HexColor('#000000');TEAL=INK;MUTED=INK;LINE=HexColor('#dce3e8')
 PROJECT='PoliSee';SUBTITLE='Counterfactual Policy Evaluation'
 REPO_URL='https://github.com/ayushman4107/Perceptron-Hackathon'
 BODY_SIZE=10.2;HEADING_SIZE=17;CAPTION_SIZE=9;CAPTION_LEADING=11.5
@@ -57,13 +57,12 @@ def abstract_page(c,text):
     for kind,s in chunks:
         if kind=='head' and s=='Novelty and differentiation':
             footer(c,1);c.showPage();page=2
-            para(c,'PoliSee | Evaluation and delivery',42,805,W-84,HEADING_SIZE,21,bold=True)
-            y=771
-        y=para(c,s,42,y,W-84,size,13.3,INK,kind=='head')
+            y=805
+        y=para(c,s,42,y,W-84,12 if kind=='head' else size,15 if kind=='head' else 13.3,INK,kind=='head')
         y-=5 if kind=='head' else 8
         if y<49:raise RuntimeError(f'Abstract page {page} overflow at {s[:40]}')
     y=chart(c,'02_policy_certificate.png',42,y-2,W-84)
-    y=para(c,'Primary OBD split, selected top-20 candidate. Finite-sample methods account for the five-candidate family; DR/Wald is asymptotic. The shaded band describes uncertainty in the independent reference, not counterfactual ground truth.',42,y-6,W-84,CAPTION_SIZE,CAPTION_LEADING)
+    y=para(c,'Primary OBD split, selected top-20 candidate. Finite-sample methods account for the five-candidate family; DR/Wald is asymptotic. The shaded band describes uncertainty in the independent reference, not counterfactual ground truth.',42,y-6,W-84,10.2,13.3)
     if y<49:raise RuntimeError(f'Certificate figure overflow: {y}')
     footer(c,2);return size
 

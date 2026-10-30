@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 ROOT=Path(__file__).resolve().parent;OUT=ROOT/'results';FIG=ROOT/'figures';FIG.mkdir(exist_ok=True)
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'axes.spines.top':False,'axes.spines.right':False,
     'axes.titleweight':'bold','axes.titlesize':12,'axes.labelsize':10,'xtick.labelsize':10,'ytick.labelsize':10,
-    'text.color':'#1f2b3b','axes.labelcolor':'#1f2b3b','xtick.color':'#1f2b3b','ytick.color':'#1f2b3b',
+    'text.color':'#000000','axes.labelcolor':'#000000','xtick.color':'#000000','ytick.color':'#000000',
     'savefig.dpi':200,'figure.facecolor':'white','axes.facecolor':'white'})
 COLORS={'item_split':'#8893a4','item_kl':'#b1b9c4','group_predictive':'#4976ae','group_exact':'#087f70','group_kl':'#baa040','dr_wald':'#bd6553','ips_wald':'#d6a269'}
 LABELS={'item_split':'Original item likelihood','item_predictive':'Item predictive likelihood','item_jeffreys':'Item Jeffreys mixture',
@@ -76,7 +76,7 @@ def main():
         ax.plot(bound,[i,i],lw=3,color=COLORS[name]);ax.plot(point,i,'o',color=COLORS[name],ms=5)
         ax.plot(bound,[i,i],'|',color=COLORS[name],ms=10)
     ax.set_yticks(range(len(names)),[LABELS[x] for x in names]);ax.invert_yaxis()
-    ax.set_xlabel('CTR gain over uniform logging (percentage points)');ax.set_title('An 80-item problem reduced to a two-group certificate',loc='left',pad=15)
+    ax.set_xlabel('CTR gain over uniform logging (percentage points)');fig.suptitle('An 80-item problem reduced to a two-group certificate',x=.5,ha='center',fontsize=14,fontweight='bold')
     # The PDF caption explains the shaded reference band at the shared caption size.
     # Avoid a duplicate, tiny legend after scaling the chart into the document.
     ax.grid(axis='x',alpha=.16);fig.tight_layout();save(fig,'02_policy_certificate')
