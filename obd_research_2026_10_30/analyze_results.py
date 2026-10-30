@@ -61,6 +61,8 @@ def main():
         ax.annotate(f'{center:.3f}%',(i,ci[1]),xytext=(0,8),textcoords='offset points',ha='center',va='bottom',fontsize=10,
                     bbox=dict(facecolor='white',edgecolor='none',pad=1.5))
     ax.set_xticks(range(4),names);ax.set_ylabel('Click-through rate (%)');ax.set_ylim(.45,.82)
+    # Keep label backgrounds clear of the vertical axis at both plot edges.
+    ax.set_xlim(-.35,3.35)
     ax.set_title('Logged performance is not the new policy’s performance',loc='left',pad=18)
     ax.grid(axis='y',alpha=.18);fig.tight_layout();save(fig,'01_obd_counterfactual')
     # Figure 2: selected candidate, full family correction, reference uncertainty visible.
