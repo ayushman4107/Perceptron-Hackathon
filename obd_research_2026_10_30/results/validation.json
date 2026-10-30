@@ -7,7 +7,7 @@
   "real_rows_processed": 6769588,
   "exploratory_splits": 300,
   "unit_tests_passed": 16,
-  "abstract_words": 797,
+  "abstract_words": 791,
   "pdf_pages": 3,
   "figures": 5,
   "visual_inspection": "All three rendered PDF pages inspected; no clipping or overlap observed."

@@ -10,7 +10,9 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 ROOT=Path(__file__).resolve().parent;OUT=ROOT/'results';FIG=ROOT/'figures';FIG.mkdir(exist_ok=True)
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'axes.spines.top':False,'axes.spines.right':False,
-    'axes.titleweight':'bold','savefig.dpi':200,'figure.facecolor':'white','axes.facecolor':'white'})
+    'axes.titleweight':'bold','axes.titlesize':12,'axes.labelsize':10,'xtick.labelsize':10,'ytick.labelsize':10,
+    'text.color':'#1f2b3b','axes.labelcolor':'#1f2b3b','xtick.color':'#1f2b3b','ytick.color':'#1f2b3b',
+    'savefig.dpi':200,'figure.facecolor':'white','axes.facecolor':'white'})
 COLORS={'item_split':'#8893a4','item_kl':'#b1b9c4','group_predictive':'#4976ae','group_exact':'#087f70','group_kl':'#baa040','dr_wald':'#bd6553','ips_wald':'#d6a269'}
 LABELS={'item_split':'Original item likelihood','item_predictive':'Item predictive likelihood','item_jeffreys':'Item Jeffreys mixture',
     'item_kl':'Item KL box','group_predictive':'Grouped predictive likelihood','group_split':'Grouped split likelihood',
@@ -54,7 +56,10 @@ def main():
     for i,v in enumerate(vals):
         center=v['mean']*100;ci=np.array(v['wald95'])*100
         ax.errorbar(i,center,yerr=[[center-ci[0]],[ci[1]-center]],fmt='o',capsize=5,color=['#8893a4','#4976ae','#087f70','#252c3a'][i],markersize=7)
-        ax.annotate(f'{center:.3f}%',(i,center),xytext=(0,12),textcoords='offset points',ha='center',fontsize=10)
+        # Anchor to the confidence interval's TOP, not the point estimate.
+        # The white label background also keeps grid lines out of the number.
+        ax.annotate(f'{center:.3f}%',(i,ci[1]),xytext=(0,8),textcoords='offset points',ha='center',va='bottom',fontsize=10,
+                    bbox=dict(facecolor='white',edgecolor='none',pad=1.5))
     ax.set_xticks(range(4),names);ax.set_ylabel('Click-through rate (%)');ax.set_ylim(.45,.82)
     ax.set_title('Logged performance is not the new policy’s performance',loc='left',pad=18)
     ax.grid(axis='y',alpha=.18);fig.tight_layout();save(fig,'01_obd_counterfactual')
@@ -72,7 +77,9 @@ def main():
         ax.plot(bound,[i,i],'|',color=COLORS[name],ms=10)
     ax.set_yticks(range(len(names)),[LABELS[x] for x in names]);ax.invert_yaxis()
     ax.set_xlabel('CTR gain over uniform logging (percentage points)');ax.set_title('An 80-item problem reduced to a two-group certificate',loc='left',pad=15)
-    ax.legend(loc='upper center',bbox_to_anchor=(.5,-.23),fontsize=7.5,frameon=False);ax.grid(axis='x',alpha=.16);fig.tight_layout();save(fig,'02_policy_certificate')
+    # The PDF caption explains the shaded reference band at the shared caption size.
+    # Avoid a duplicate, tiny legend after scaling the chart into the document.
+    ax.grid(axis='x',alpha=.16);fig.tight_layout();save(fig,'02_policy_certificate')
     # Figure 3: all five candidates, not a handpicked easiest interval.
     names=['item_split','item_predictive','item_kl','group_predictive','group_kl','group_exact'];widths=[np.median(np.diff(r['bounds'][x],axis=1))*100 for x in names]
     fig,ax=plt.subplots(figsize=(8,3.5));ax.barh(range(len(names)),widths,color=[COLORS.get(x,'#99aabe') for x in names],height=.58)

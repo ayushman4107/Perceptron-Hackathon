@@ -1,4 +1,4 @@
-From 80 Items to Two Reward Groups: Auditable Policy Evaluation
+PolicyLens: Counterfactual Policy Evaluation
 
 Problem and theme
 
