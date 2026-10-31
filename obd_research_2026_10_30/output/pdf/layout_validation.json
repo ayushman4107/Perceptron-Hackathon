@@ -8,10 +8,9 @@
     3524,
     2721,
     1189,
-    821
+    781
   ],
-  "pdf_bytes": 1081629,
-  "paragraph_alignment": "justified",
-  "architecture_note_source_font_size": 15,
-  "visual_inspection": "All four pages inspected; justified body and captions, larger architecture notes, no overlaps or clipping."
+  "pdf_bytes": 281864,
+  "page_format": "A4 portrait on all four pages",
+  "visual_inspection": "Full portrait architecture inspected without clipping. First three pages pixel-identical to previous version."
 }

@@ -7,7 +7,7 @@ Our project evaluates which policy changes logged data can support. The latest e
 ## Start here
 
 1. [Current abstract](obd_research_2026_10_30/ABSTRACT.md) — 797 words covering all eight requested sections, with measured results.
-2. [Illustrated submission PDF](obd_research_2026_10_30/output/pdf/Abstract_with_Evidence.pdf) — two abstract pages including a result plot, plus an evidence supplement and a landscape system-architecture page.
+2. [Illustrated submission PDF](obd_research_2026_10_30/output/pdf/Abstract_with_Evidence.pdf) — two abstract pages including a result plot, plus an evidence supplement and a full portrait system-architecture page.
 3. [Latest research package](obd_research_2026_10_30/README.md), [results](obd_research_2026_10_30/RESULTS_REPORT.md), and [technical derivation](obd_research_2026_10_30/TECHNICAL_DERIVATION.md) — data access, assumptions, code, figures, and full comparisons.
 4. [Revised research document](research_audit_2026_10_30/Problem_3_Off_Policy_Evaluation_Revised.md) — detailed foundations, methods, literature, assumptions, and limitations.
 5. [Earlier likelihood extension](likelihood_extension_2026_10_30/TECHNICAL_NOTE.md) and [its results](likelihood_extension_2026_10_30/RESULTS.md) — the preceding experiment, retained unchanged for provenance.

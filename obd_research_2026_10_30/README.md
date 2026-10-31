@@ -1,6 +1,6 @@
 # PoliSee: Research and Evidence
 
-This package supersedes the earlier abstract proposal. Start with the [revised abstract](ABSTRACT.md) and [illustrated PDF](output/pdf/Abstract_with_Evidence.pdf). The PDF contains two abstract pages (including a result plot) a one-page approach/evidence supplement, and the approved architecture on a landscape fourth page. The official brief suggests 600-900 words plus an optional approach page; the abstract text is within that word range. No claim is made that the organizers impose a strict three-page allowance; use the plain text if the submission form controls layout.
+This package supersedes the earlier abstract proposal. Start with the [revised abstract](ABSTRACT.md) and [illustrated PDF](output/pdf/Abstract_with_Evidence.pdf). The PDF contains two abstract pages (including a result plot) a one-page approach/evidence supplement, and the approved architecture on a full portrait fourth page. The official brief suggests 600-900 words plus an optional approach page; the abstract text is within that word range. No claim is made that the organizers impose a strict three-page allowance; use the plain text if the submission form controls layout.
 
 ## What changed
 

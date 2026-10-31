@@ -105,32 +105,46 @@ def evidence_page(c):
     if y<47:raise RuntimeError(f'Evidence page overflow: bottom {y}')
     footer(c,3);return y
 
+def architecture_page(c):
+    header(c)
+    para(c,'PoliSee | System architecture',42,805,W-84,HEADING_SIZE,21,bold=True)
+    para(c,'From logged decisions to evidence about a different policy',42,778,W-84,BODY_SIZE,13.3)
+    def box(cx,cy,w,h,title,body,fill='#f5f7f9'):
+        c.setFillColor(HexColor(fill));c.setStrokeColor(HexColor('#aab7c4'));c.setLineWidth(.8)
+        c.roundRect(cx-w/2,cy-h/2,w,h,7,stroke=1,fill=1)
+        for txt,top,size,bold in [(title,cy+h/2-11,11.5,True),(body,cy+h/2-31,10.2,False)]:
+            style=ParagraphStyle('box',fontName='DVB' if bold else 'DV',fontSize=size,leading=14,textColor=INK,alignment=1)
+            q=Paragraph(escape(txt).replace('\n','<br/>'),style);_,height=q.wrap(w-16,200);q.drawOn(c,cx-w/2+8,top-height)
+    box(297,710,270,62,'Logged decisions','Actions, rewards and selection probabilities')
+    for x in [127,297,467]:
+        c.setStrokeColor(INK);c.setLineWidth(.8);c.line(297,679,297,663);c.line(127,663,467,663)
+        arrow(c,x,663,x,646)
+    box(127,603,164,84,'Pilot','Select and freeze\ncandidate policies')
+    box(297,603,150,84,'Certification','Estimate candidate\npolicy gains')
+    box(467,603,164,84,'Reference','Independent check\nonly; no tuning')
+    c.setStrokeColor(INK);c.line(127,561,127,536);c.line(127,536,257,536);arrow(c,257,536,257,520)
+    arrow(c,297,561,297,520)
+    box(297,480,270,78,'Policy-ratio compression','Check matching ratios;\ngroup equivalent actions','#eef5fa')
+    arrow(c,297,441,297,408)
+    box(297,368,270,78,'Uncertainty estimation','Gain bounds + validity checks\nIPS / DR comparisons','#eef5fa')
+    arrow(c,297,329,297,293)
+    box(297,240,270,104,'Decision report','Gain interval + assumptions\nEvidence of improvement*\nor insufficient evidence','#edf6f2')
+    c.setStrokeColor(INK);c.setLineWidth(.8);c.setDash(4,3)
+    c.line(467,561,467,545);c.line(467,545,553,545);c.line(553,545,553,240);c.line(553,240,433,240);c.setDash();c.line(433,240,438,243);c.line(433,240,438,237)
+    para(c,'Held-out comparison',446,403,95,10.2,14)
+    para(c,'* Improvement requires a positive lower bound and satisfied validity conditions.',42,148,W-84,10.2,14,justify=True)
+    para(c,'Reference outcomes are empirical estimates, not exact counterfactual ground truth.',42,105,W-84,10.2,14,justify=True)
+    footer(c,4)
+
 def main():
     text=(ROOT/'ABSTRACT.md').read_text(encoding='utf-8');assert 600<=len(text.split())<=900
     pdf=OUT/'Abstract_with_Evidence.pdf';c=canvas.Canvas(str(pdf),pagesize=(W,H))
     c.setTitle(PROJECT+': '+SUBTITLE);c.setAuthor('Team Zero1')
-    size=abstract_page(c,text);c.showPage();bottom=evidence_page(c);c.showPage();c.save()
+    size=abstract_page(c,text);c.showPage();bottom=evidence_page(c);c.showPage();architecture_page(c);c.showPage();c.save()
     plain=re.sub(r'^#+\s*','',text,flags=re.M).replace('**','')
     plain=re.sub(r'\[([^\]]+)\]\((https?://[^)]+)\)',r'\1: \2',plain)
     (ROOT/'ABSTRACT_plain.txt').write_text(plain,encoding='utf-8')
     render=ROOT/'tmp'/'pdf_preview';render.mkdir(parents=True,exist_ok=True)
-    doc=pymupdf.open(pdf);assert len(doc)==3
-    # Append the approved architecture as a readable, vector landscape page.
-    vector=pymupdf.open(str(ROOT/'figures'/'06_polisee_architecture.pdf'))
-    page=doc.new_page(width=H,height=W)
-    page.insert_font(fontname='DV',fontfile=str(FONT/'DejaVuSans.ttf'))
-    page.insert_font(fontname='DVB',fontfile=str(FONT/'DejaVuSans-Bold.ttf'))
-    page.insert_text((42,24),'PERCEPTRON  /  PROBLEM 3  /  THEME 2',fontname='DV',fontsize=9,color=(0,0,0))
-    page.insert_text((42,53),'PoliSee | System architecture',fontname='DVB',fontsize=17,color=(0,0,0))
-    page.insert_text((42,74),'From logged decisions to evidence about a different policy',fontname='DV',fontsize=10.2,color=(0,0,0))
-    clip=pymupdf.Rect(20,110,1132,590)
-    figure_height=(H-84)*clip.height/clip.width
-    page.show_pdf_page(pymupdf.Rect(42,96,H-42,96+figure_height),vector,0,clip=clip)
-    page.draw_line((42,W-37),(H-42,W-37),color=(.86,.89,.91),width=.7)
-    page.insert_font(fontname='DV',fontfile=str(FONT/'DejaVuSans.ttf'))
-    page.insert_text((42,W-23),'PoliSee | Perceptron | Problem 3',fontname='DV',fontsize=9,color=(0,0,0))
-    page.insert_text((H-48,W-23),'4',fontname='DV',fontsize=9,color=(0,0,0))
-    final_bytes=doc.tobytes(garbage=4,deflate=True);doc.close();pdf.write_bytes(final_bytes)
     doc=pymupdf.open(pdf);assert len(doc)==4
     for i,page in enumerate(doc):page.get_pixmap(matrix=pymupdf.Matrix(1.6,1.6)).save(render/f'page-{i+1}.png')
     report=dict(words_including_title_headings=len(text.split()),sections=text.count('\n## '),pages=len(doc),body_font_size=size,evidence_bottom=bottom,
