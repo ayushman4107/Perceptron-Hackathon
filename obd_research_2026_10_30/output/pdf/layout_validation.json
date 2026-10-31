@@ -5,13 +5,15 @@
   "body_font_size": 10.2,
   "evidence_bottom": 50.735356930427855,
   "page_text_characters": [
-    3513,
-    2684,
-    1152,
-    784
+    3524,
+    2721,
+    1189,
+    821
   ],
-  "pdf_bytes": 706411,
-  "visual_inspection": "Architecture page visually inspected; first three pages pixel-identical to previously reviewed PDF.",
-  "architecture_body_font_size": 13.5,
-  "architecture_title_font_size": 15
+  "pdf_bytes": 1081107,
+  "header_font_size": 9,
+  "header_baseline_from_top": 24,
+  "title_font_size": 17,
+  "team": "Zero1",
+  "visual_inspection": "All four pages inspected; consistent running headers and no clipping or overlap."
 }

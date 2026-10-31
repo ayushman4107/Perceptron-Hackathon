@@ -37,11 +37,17 @@ def footer(c,page):
     c.drawString(42,23,'PoliSee | Perceptron | Problem 3')
     c.drawRightString(W-42,24,str(page))
 
+def header(c):
+    c.setFillColor(INK);c.setFont('DV',9)
+    c.drawString(42,H-24,'PERCEPTRON  /  PROBLEM 3  /  THEME 2')
+
 def abstract_page(c,text):
-    c.setFillColor(INK);c.setFont('DV',CAPTION_SIZE);c.drawString(42,806,'PERCEPTRON  /  PROBLEM 3  /  THEME 2')
-    para(c,PROJECT,42,788,W-84,HEADING_SIZE,21,bold=True)
-    para(c,SUBTITLE,42,761,W-84,BODY_SIZE,13.3)
+    header(c)
+    para(c,PROJECT,42,805,W-84,HEADING_SIZE,21,bold=True)
+    para(c,SUBTITLE,42,778,W-84,BODY_SIZE,13.3)
     c.setFont('DV',CAPTION_SIZE);c.setFillColor(INK)
+    c.setFont('DVB',BODY_SIZE);c.drawString(42,752,'Team Zero1')
+    c.setFont('DV',CAPTION_SIZE)
     label='Code and results: ';url_label='github.com/ayushman4107/Perceptron-Hackathon'
     c.drawString(42,738,label+url_label)
     left=42+pdfmetrics.stringWidth(label,'DV',CAPTION_SIZE)
@@ -56,7 +62,7 @@ def abstract_page(c,text):
     y=716;size=BODY_SIZE;page=1
     for kind,s in chunks:
         if kind=='head' and s=='Novelty and differentiation':
-            footer(c,1);c.showPage();page=2
+            footer(c,1);c.showPage();page=2;header(c)
             y=805
         y=para(c,s,42,y,W-84,12 if kind=='head' else size,15 if kind=='head' else 13.3,INK,kind=='head')
         y-=5 if kind=='head' else 8
@@ -76,6 +82,7 @@ def arrow(c,x1,y1,x2,y2):
     else:c.line(x2,y2,x2-4,y2-3);c.line(x2,y2,x2-4,y2+3)
 
 def evidence_page(c):
+    header(c)
     para(c,'PoliSee | Approach and evidence',42,805,W-84,HEADING_SIZE,21,bold=True)
     para(c,'Optional supplement | Frozen primary split; full campaign files',42,778,W-84,CAPTION_SIZE,CAPTION_LEADING)
     # Explicitly independent data branches, rather than an apparent sequential reference fit.
@@ -101,7 +108,7 @@ def evidence_page(c):
 def main():
     text=(ROOT/'ABSTRACT.md').read_text(encoding='utf-8');assert 600<=len(text.split())<=900
     pdf=OUT/'Abstract_with_Evidence.pdf';c=canvas.Canvas(str(pdf),pagesize=(W,H))
-    c.setTitle(PROJECT+': '+SUBTITLE);c.setAuthor('Perceptron hackathon team')
+    c.setTitle(PROJECT+': '+SUBTITLE);c.setAuthor('Team Zero1')
     size=abstract_page(c,text);c.showPage();bottom=evidence_page(c);c.showPage();c.save()
     plain=re.sub(r'^#+\s*','',text,flags=re.M).replace('**','')
     plain=re.sub(r'\[([^\]]+)\]\((https?://[^)]+)\)',r'\1: \2',plain)
@@ -111,7 +118,14 @@ def main():
     # Append the approved architecture as a readable, vector landscape page.
     vector=pymupdf.open(str(ROOT/'figures'/'06_polisee_architecture.pdf'))
     page=doc.new_page(width=H,height=W)
-    page.show_pdf_page(pymupdf.Rect(20,35,H-20,W-55),vector,0)
+    page.insert_font(fontname='DV',fontfile=str(FONT/'DejaVuSans.ttf'))
+    page.insert_font(fontname='DVB',fontfile=str(FONT/'DejaVuSans-Bold.ttf'))
+    page.insert_text((42,24),'PERCEPTRON  /  PROBLEM 3  /  THEME 2',fontname='DV',fontsize=9,color=(0,0,0))
+    page.insert_text((42,53),'PoliSee | System architecture',fontname='DVB',fontsize=17,color=(0,0,0))
+    page.insert_text((42,74),'From logged decisions to evidence about a different policy',fontname='DV',fontsize=10.2,color=(0,0,0))
+    clip=pymupdf.Rect(20,110,1132,590)
+    figure_height=(H-84)*clip.height/clip.width
+    page.show_pdf_page(pymupdf.Rect(42,96,H-42,96+figure_height),vector,0,clip=clip)
     page.draw_line((42,W-37),(H-42,W-37),color=(.86,.89,.91),width=.7)
     page.insert_font(fontname='DV',fontfile=str(FONT/'DejaVuSans.ttf'))
     page.insert_text((42,W-23),'PoliSee | Perceptron | Problem 3',fontname='DV',fontsize=9,color=(0,0,0))
