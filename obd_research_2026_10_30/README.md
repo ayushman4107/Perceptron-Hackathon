@@ -1,6 +1,6 @@
 # PoliSee: Research and Evidence
 
-This package supersedes the earlier abstract proposal. Start with the [revised abstract](ABSTRACT.md) and [illustrated PDF](output/pdf/Abstract_with_Evidence.pdf). The PDF contains two abstract pages (including a result plot) and a one-page approach/evidence supplement. The official brief suggests 600-900 words plus an optional approach page; the abstract text is within that word range. No claim is made that the organizers impose a strict three-page allowance; use the plain text if the submission form controls layout.
+This package supersedes the earlier abstract proposal. Start with the [revised abstract](ABSTRACT.md) and [illustrated PDF](output/pdf/Abstract_with_Evidence.pdf). The PDF contains two abstract pages (including a result plot) a one-page approach/evidence supplement, and the approved architecture on a landscape fourth page. The official brief suggests 600-900 words plus an optional approach page; the abstract text is within that word range. No claim is made that the organizers impose a strict three-page allowance; use the plain text if the submission form controls layout.
 
 ## What changed
 
@@ -55,3 +55,5 @@ Run commands from this directory. Runners overwrite their saved results. Synthet
 Implemented: dataset conversion and integrity checks, IPS/SNIPS/tabular cross-fitted DR, exact-ratio algebra, confidence constructions, numerical endpoint witnesses, synthetic truth-based testing, real-data held-out comparisons, chronological and block-bootstrap diagnostics, saved graphs, and submission materials.
 
 Planned: an integrated Streamlit interface, general personalized policies, a specified hidden-confounding sensitivity module, and deployment integrations. The certificate assumes identification, stationary independent observations and an appropriate position-wise response model. It is not a user-level causal guarantee or a whole-slate evaluation.
+
+Regenerate the architecture with `python build_architecture.py` before running `python build_submission.py`. Editable SVG, PNG and vector PDF versions are in `figures/06_polisee_architecture.*`.

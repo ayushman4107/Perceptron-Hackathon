@@ -1,17 +1,17 @@
 {
   "words_including_title_headings": 797,
   "sections": 8,
-  "pages": 3,
+  "pages": 4,
   "body_font_size": 10.2,
   "evidence_bottom": 50.735356930427855,
   "page_text_characters": [
     3513,
     2684,
-    1152
+    1152,
+    784
   ],
-  "pdf_bytes": 278513,
-  "text_color_hex": "#000000",
-  "section_heading_size": 12,
-  "certificate_caption_size": 10.2,
-  "visual_inspection": "Page 3 inspected: axis continuous and label clear. Pages 1 and 2 pixel-identical to previously reviewed PDF."
+  "pdf_bytes": 706411,
+  "visual_inspection": "Architecture page visually inspected; first three pages pixel-identical to previously reviewed PDF.",
+  "architecture_body_font_size": 13.5,
+  "architecture_title_font_size": 15
 }

@@ -108,6 +108,16 @@ def main():
     (ROOT/'ABSTRACT_plain.txt').write_text(plain,encoding='utf-8')
     render=ROOT/'tmp'/'pdf_preview';render.mkdir(parents=True,exist_ok=True)
     doc=pymupdf.open(pdf);assert len(doc)==3
+    # Append the approved architecture as a readable, vector landscape page.
+    vector=pymupdf.open(str(ROOT/'figures'/'06_polisee_architecture.pdf'))
+    page=doc.new_page(width=H,height=W)
+    page.show_pdf_page(pymupdf.Rect(20,35,H-20,W-55),vector,0)
+    page.draw_line((42,W-37),(H-42,W-37),color=(.86,.89,.91),width=.7)
+    page.insert_font(fontname='DV',fontfile=str(FONT/'DejaVuSans.ttf'))
+    page.insert_text((42,W-23),'PoliSee | Perceptron | Problem 3',fontname='DV',fontsize=9,color=(0,0,0))
+    page.insert_text((H-48,W-23),'4',fontname='DV',fontsize=9,color=(0,0,0))
+    final_bytes=doc.tobytes(garbage=4,deflate=True);doc.close();pdf.write_bytes(final_bytes)
+    doc=pymupdf.open(pdf);assert len(doc)==4
     for i,page in enumerate(doc):page.get_pixmap(matrix=pymupdf.Matrix(1.6,1.6)).save(render/f'page-{i+1}.png')
     report=dict(words_including_title_headings=len(text.split()),sections=text.count('\n## '),pages=len(doc),body_font_size=size,evidence_bottom=bottom,
         page_text_characters=[len(p.get_text()) for p in doc],pdf_bytes=pdf.stat().st_size)

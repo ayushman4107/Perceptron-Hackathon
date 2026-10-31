@@ -7,7 +7,7 @@ Our project evaluates which policy changes logged data can support. The latest e
 ## Start here
 
 1. [Current abstract](obd_research_2026_10_30/ABSTRACT.md) — 797 words covering all eight requested sections, with measured results.
-2. [Illustrated submission PDF](obd_research_2026_10_30/output/pdf/Abstract_with_Evidence.pdf) — two abstract pages including a result plot, plus a one-page approach/evidence supplement.
+2. [Illustrated submission PDF](obd_research_2026_10_30/output/pdf/Abstract_with_Evidence.pdf) — two abstract pages including a result plot, plus an evidence supplement and a landscape system-architecture page.
 3. [Latest research package](obd_research_2026_10_30/README.md), [results](obd_research_2026_10_30/RESULTS_REPORT.md), and [technical derivation](obd_research_2026_10_30/TECHNICAL_DERIVATION.md) — data access, assumptions, code, figures, and full comparisons.
 4. [Revised research document](research_audit_2026_10_30/Problem_3_Off_Policy_Evaluation_Revised.md) — detailed foundations, methods, literature, assumptions, and limitations.
 5. [Earlier likelihood extension](likelihood_extension_2026_10_30/TECHNICAL_NOTE.md) and [its results](likelihood_extension_2026_10_30/RESULTS.md) — the preceding experiment, retained unchanged for provenance.
@@ -24,7 +24,7 @@ This repository contains research documents, numerical prototypes, real-data eva
 | [Earlier innovation investigation](innovation_research_2026_10_30/README.md) | Shared-region comparison and novelty falsification | 17 passing tests; 36,000 synthetic logs; candidate matched an established robust comparator |
 | [Earlier likelihood extension](likelihood_extension_2026_10_30/TECHNICAL_NOTE.md) | Joint likelihood region and policy-contrast optimization | 13 passing tests; 8,000 synthetic logs; primary comparison tied the strong KL-box baseline |
 | [Current OBD extension](obd_research_2026_10_30/README.md) | Exact policy-ratio compression and comparative inference | 16 passing tests; 6.77 million real rows processed; 8,000 additional synthetic logs; 11 methods |
-| [Current submission materials](obd_research_2026_10_30/ABSTRACT.md) | Evidence-based proposal and illustrated supplement | Eight sections; 797-word abstract; five standalone figures |
+| [Current submission materials](obd_research_2026_10_30/ABSTRACT.md) | Evidence-based proposal and illustrated supplement | Eight sections; 797-word abstract; six standalone figures |
 
 **Do not claim a world-first algorithm or universal superiority.** On the fixed primary OBD split, grouped exact bounds reduced median interval width by 82.6% versus the original item-level likelihood and 79.0% versus item-level KL bounds. The predictive likelihood extension did not beat the stronger grouped exact baseline overall. Real-data references have sampling uncertainty, and repeated splits overlap. Confidence statements require the declared identification and statistical assumptions.
 
