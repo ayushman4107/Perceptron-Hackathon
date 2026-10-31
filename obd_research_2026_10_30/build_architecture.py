@@ -38,7 +38,7 @@ box(.875,.49,.19,.36,'Decision report','Gain interval + assumptions\n\nEvidence 
 arrow([(.748,.405),(.772,.405)])
 arrow([(.468,.24),(.875,.24),(.875,.302)],True)
 text(.675,.205,'Held-out comparison',11)
-text(.035,.10,'* Improvement requires a positive lower bound and satisfied validity conditions.',11,ha='left')
-text(.035,.052,'Reference outcomes are empirical estimates, not exact counterfactual ground truth.',11,ha='left')
+text(.035,.10,'* Improvement requires a positive lower bound and satisfied validity conditions.',15,ha='left')
+text(.035,.052,'Reference outcomes are empirical estimates, not exact counterfactual ground truth.',15,ha='left')
 for ext in ['png','svg','pdf']:
  fig.savefig(ROOT/'figures'/f'06_polisee_architecture.{ext}',dpi=180,facecolor='white')

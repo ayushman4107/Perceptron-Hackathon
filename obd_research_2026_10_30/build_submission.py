@@ -29,8 +29,8 @@ def clean(s):
     for old,new in [('—','-'),('–','-'),('−','-'),('‑','-'),('“','"'),('”','"'),('’',"'")]:s=s.replace(old,new)
     return s
 def markup(s):return re.sub(r'\*\*(.*?)\*\*',r'<b>\1</b>',escape(clean(s)))
-def para(c,text,x,y,w,size=9.5,leading=12.5,color=INK,bold=False):
-    p=Paragraph(markup(text),ParagraphStyle('p',fontName='DVB' if bold else 'DV',fontSize=size,leading=leading,textColor=color))
+def para(c,text,x,y,w,size=9.5,leading=12.5,color=INK,bold=False,justify=False):
+    p=Paragraph(markup(text),ParagraphStyle('p',fontName='DVB' if bold else 'DV',fontSize=size,leading=leading,textColor=color,alignment=4 if justify else 0))
     _,h=p.wrap(w,1000);p.drawOn(c,x,y-h);return y-h
 def footer(c,page):
     c.setStrokeColor(LINE);c.line(42,37,W-42,37);c.setFont('DV',CAPTION_SIZE);c.setFillColor(INK)
@@ -64,11 +64,11 @@ def abstract_page(c,text):
         if kind=='head' and s=='Novelty and differentiation':
             footer(c,1);c.showPage();page=2;header(c)
             y=805
-        y=para(c,s,42,y,W-84,12 if kind=='head' else size,15 if kind=='head' else 13.3,INK,kind=='head')
+        y=para(c,s,42,y,W-84,12 if kind=='head' else size,15 if kind=='head' else 13.3,INK,kind=='head',justify=kind=='body')
         y-=5 if kind=='head' else 8
         if y<49:raise RuntimeError(f'Abstract page {page} overflow at {s[:40]}')
     y=chart(c,'02_policy_certificate.png',42,y-2,W-84)
-    y=para(c,'Primary OBD split, selected top-20 candidate. Finite-sample methods account for the five-candidate family; DR/Wald is asymptotic. The shaded band describes uncertainty in the independent reference, not counterfactual ground truth.',42,y-6,W-84,10.2,13.3)
+    y=para(c,'Primary OBD split, selected top-20 candidate. Finite-sample methods account for the five-candidate family; DR/Wald is asymptotic. The shaded band describes uncertainty in the independent reference, not counterfactual ground truth.',42,y-6,W-84,10.2,13.3,justify=True)
     if y<49:raise RuntimeError(f'Certificate figure overflow: {y}')
     footer(c,2);return size
 
@@ -96,11 +96,11 @@ def evidence_page(c):
         para(c,title,x+8,702,139,CAPTION_SIZE,CAPTION_LEADING,bold=True);para(c,body,x+8,687,139,CAPTION_SIZE,CAPTION_LEADING)
     para(c,'Exact reduction: Δ = (1-k/A) × (q_top - q_rest). Unequal item rewards are allowed.',42,653,W-84,CAPTION_SIZE,CAPTION_LEADING,bold=True)
     y=chart(c,'01_obd_counterfactual.png',42,634,W-84)
-    y=para(c,'A. Men’s campaign, first position: 1,358,878 BTS rows and 150,936 Random rows. Bars: pointwise 95% Wald intervals. Raw BTS CTR is a naive proxy; Random CTR is an independent empirical reference.',42,y-6,W-84,CAPTION_SIZE,CAPTION_LEADING)
+    y=para(c,'A. Men’s campaign, first position: 1,358,878 BTS rows and 150,936 Random rows. Bars: pointwise 95% Wald intervals. Raw BTS CTR is a naive proxy; Random CTR is an independent empirical reference.',42,y-6,W-84,CAPTION_SIZE,CAPTION_LEADING,justify=True)
     y=chart(c,'03_ablation.png',42,y-16,W-84)
-    y=para(c,'B. Random/all: five pilot-learned candidates; 183,450 certification rows. Intervals account for candidate selection. Median paired width reduction: 82.6% versus original item likelihood. Grouped exact is the recommended procedure.',42,y-6,W-84,CAPTION_SIZE,CAPTION_LEADING)
-    y=para(c,'Validation: 8,000 synthetic logs × 11 methods; 16 tests. Dependence, drift and slate interference remain limitations. All comparisons are retained.',42,y-9,W-84,CAPTION_SIZE,CAPTION_LEADING)
-    y=para(c,'Sources: Saito et al. (2021); Wasserman et al. (2020); Saito & Joachims (2022); Lee et al. (2026). References, code and results: github.com/ayushman4107/Perceptron-Hackathon',42,y-8,W-84,CAPTION_SIZE,CAPTION_LEADING)
+    y=para(c,'B. Random/all: five pilot-learned candidates; 183,450 certification rows. Intervals account for candidate selection. Median paired width reduction: 82.6% versus original item likelihood. Grouped exact is the recommended procedure.',42,y-6,W-84,CAPTION_SIZE,CAPTION_LEADING,justify=True)
+    y=para(c,'Validation: 8,000 synthetic logs × 11 methods; 16 tests. Dependence, drift and slate interference remain limitations. All comparisons are retained.',42,y-9,W-84,CAPTION_SIZE,CAPTION_LEADING,justify=True)
+    y=para(c,'Sources: Saito et al. (2021); Wasserman et al. (2020); Saito & Joachims (2022); Lee et al. (2026). References, code and results: github.com/ayushman4107/Perceptron-Hackathon',42,y-8,W-84,CAPTION_SIZE,CAPTION_LEADING,justify=True)
     c.linkURL('https://github.com/ayushman4107/Perceptron-Hackathon',(42,y-2,W-42,y+25),relative=0)
     if y<47:raise RuntimeError(f'Evidence page overflow: bottom {y}')
     footer(c,3);return y

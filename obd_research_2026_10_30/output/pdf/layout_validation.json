@@ -10,10 +10,8 @@
     1189,
     821
   ],
-  "pdf_bytes": 1081107,
-  "header_font_size": 9,
-  "header_baseline_from_top": 24,
-  "title_font_size": 17,
-  "team": "Zero1",
-  "visual_inspection": "All four pages inspected; consistent running headers and no clipping or overlap."
+  "pdf_bytes": 1081629,
+  "paragraph_alignment": "justified",
+  "architecture_note_source_font_size": 15,
+  "visual_inspection": "All four pages inspected; justified body and captions, larger architecture notes, no overlaps or clipping."
 }
